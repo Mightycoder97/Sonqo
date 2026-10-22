@@ -1,0 +1,186 @@
+@import "tailwindcss";
+
+@theme {
+  /* Color Principal: #8B66E8 (Violeta Sonqo) */
+  --color-primary: #8B66E8;
+  --color-primary-light: #A688F2;
+  --color-primary-dark: #6E46D4;
+
+  /* Color Secundario: #213E4C (Azul Petróleo Oscuro) */
+  --color-secondary: #213E4C;
+  --color-secondary-light: #2E5568;
+
+  /* Accent */
+  --color-accent: #8B66E8;
+  --color-accent-light: #D4C4FB;
+  --color-accent-dark: #6E46D4;
+
+  /* Fondos y superficies */
+  --color-cream: #F5F2FD;
+  --color-surface: #F4F6F8;
+  --color-background-alt: #FFFFFF;
+
+  /* Texto */
+  --color-text-main: #213E4C;
+  --color-text-light: #526875;
+  --color-text-muted: #9CA3AF;
+
+  /* Semánticos */
+  --color-success: #10B981;
+  --color-error: #EF4444;
+  --color-warning: #F59E0B;
+  --color-info: #3B82F6;
+
+  /* Superficies oscuras y CTAs */
+  --color-footer-bg: #213E4C;
+  --color-offer: #8B66E8;
+  --color-cta: #8B66E8;
+  --color-cta-hover: #6E46D4;
+  
+  --font-sans: var(--font-montserrat);
+  --font-serif: var(--font-dm-serif);
+
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+}
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #213E4C;
+  }
+}
+
+html[data-brand="mta"] {
+  --color-primary: #048A84;
+  --color-primary-light: #06C0B8;
+  --color-primary-dark: #036B66;
+  --color-secondary: #036B66;
+  --color-accent: #C4A35A;
+  --color-accent-light: #E8D5A3;
+  --color-accent-dark: #A68B42;
+  --color-cream: #F5F5E9;
+  --color-surface: #F4F4F4;
+  --color-text-main: #1A1A1A;
+  --color-footer-bg: #1a1a2e;
+  --color-offer: #F97316;
+  --color-cta: #ff7a00;
+  --color-cta-hover: #e06b00;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+body.menu-open {
+  overflow: hidden;
+  height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif), sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Focus visible para accesibilidad con teclado */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Respetar preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Skip to content link */
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: var(--color-primary-dark);
+  color: white;
+  font-weight: 600;
+  border-radius: 0 0 0.5rem 0.5rem;
+  transition: top 0.2s;
+}
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* Touch-friendly interactive elements */
+a, button, [role="button"], input, select, textarea, label {
+  touch-action: manipulation;
+}
+
+/* Minimum touch target sizes on mobile */
+@media (pointer: coarse) {
+  a, button, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  input, select, textarea {
+    font-size: 16px; /* Prevents iOS zoom on focus */
+  }
+}
+
+/* Hide scrollbar for horizontal scroll carousels */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Print styles for PDF download */
+@media print {
+  nav, footer, .whatsapp-btn, button { display: none !important; }
+  body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+/* === IMAGE PROTECTION === */
+img {
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+
+.protected-gallery {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.photo-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Prevent pointer events on image overlays to avoid selection */
+[data-protected] img {
+  pointer-events: none;
+}
+

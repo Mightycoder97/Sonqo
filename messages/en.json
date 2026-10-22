@@ -1,0 +1,951 @@
+{
+  "nav": {
+    "toursAndPackages": "Tours & Packages",
+    "destinations": "Destinations",
+    "aboutUs": "About Us",
+    "blog": "Blog",
+    "planYourTrip": "Plan Your Trip",
+    "viewAllTours": "View All Tours",
+    "topDestinations": "Top Destinations",
+    "experiences": "Experiences",
+    "contactUs": "Contact",
+    "dropdown": {
+      "machuPicchuFullDay": "Machu Picchu Full Day",
+      "sacredValley": "Sacred Valley of the Incas",
+      "rainbowMountain": "Rainbow Mountain",
+      "gastronomicTours": "Gastronomic Tours",
+      "classicIncaTrail": "Classic Inca Trail",
+      "communityTourism": "Community Tourism"
+    },
+    "destinationItems": {
+      "cusco": "Cusco",
+      "sacredValley": "Sacred Valley",
+      "machuPicchu": "Machu Picchu",
+      "humantayLake": "Humantay Lake",
+      "rainbowMountain": "Rainbow Mountain"
+    },
+    "ariaLabels": {
+      "closeMenu": "Close menu",
+      "openMenu": "Open menu",
+      "logo": "Machu Picchu Travel Adventure Logo"
+    },
+    "contact": {
+      "phone": "+51 955 723 329",
+      "email": "reservasmtaperu@gmail.com"
+    }
+  },
+
+  "footer": {
+    "brand": {
+      "name": "Machu Picchu Travel Adventure",
+      "description": "Experts in creating unforgettable travel experiences in the heart of the Inca Empire. Connecting travelers with the magic of Cusco and all of Peru."
+    },
+    "servicios": {
+      "title": "Services",
+      "paquetes": "Tour Packages",
+      "machuPicchu": "Machu Picchu",
+      "huacachina": "Huacachina",
+      "salarUyuni": "Salar de Uyuni",
+      "montanaColores": "Rainbow Mountain",
+      "valleSagrado": "Sacred Valley of the Incas",
+      "islasBallestas": "Ballestas Islands",
+      "lagoTiticaca": "Lake Titicaca"
+    },
+    "util": {
+      "title": "Useful Info",
+      "paquetes": "Tour Packages",
+      "blogMachuPicchu": "How to get to Machu Picchu? (Blog)",
+      "destinosRecomendados": "Recommended destinations",
+      "planificarViaje": "Plan your trip",
+      "blog": "Travel Blog"
+    },
+    "legales": {
+      "title": "Legal / About Us",
+      "terminos": "Terms & conditions",
+      "privacidad": "Privacy policies",
+      "cookies": "Cookies policy",
+      "compromiso": "Our commitment"
+    },
+    "ayuda": {
+      "title": "Help Center",
+      "cambios": "Changes & rescheduling",
+      "faq": "Frequently asked questions",
+      "centroAyuda": "Help center",
+      "libroReclamaciones": "Complaints book"
+    },
+    "corporativo": {
+      "title": "Corporate Info",
+      "ayudaSocial": "Social work",
+      "rucLabel": "RUC (Tax ID): {ruc}",
+      "aliados": "Our Allies"
+    },
+    "contact": {
+      "title": "Contact",
+      "address": "Av. El Sol 123, Historic Center, Cusco, Peru",
+      "phone": "+51 955 723 329",
+      "email": "reservasmtaperu@gmail.com",
+      "hours": "Mon - Sun: 24/7 (Online Support)"
+    },
+    "social": {
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "tiktok": "TikTok",
+      "youtube": "YouTube"
+    },
+    "bottom": {
+      "copyright": "© {year} Machu Picchu Travel Adventures. All rights reserved.",
+      "paymentMethods": "Payment methods:"
+    }
+  },
+
+  "languageSwitcher": {
+    "es": "Español",
+    "en": "English"
+  },
+
+  "home": {
+    "hero": {
+      "slides": {
+        "0": {
+          "title": "Experience a",
+          "titleAccent": "legendary",
+          "titleSuffix": "journey by train",
+          "subtitle": "Toward the wonders of Cusco and the mythical citadel of Machu Picchu.",
+          "cta": "Explore Tours"
+        },
+        "1": {
+          "title": "Discover the",
+          "titleAccent": "Sacred Valley",
+          "titleSuffix": "",
+          "subtitle": "A unique journey through the most breathtaking landscapes and ruins of the Andes.",
+          "cta": "View Packages"
+        },
+        "2": {
+          "title": "Adventure at",
+          "titleAccent": "Rainbow Mountain",
+          "titleSuffix": "",
+          "subtitle": "Walk across nature's vibrant colors at over 16,000 feet above sea level.",
+          "cta": "Book Now"
+        }
+      },
+      "ariaLabels": {
+        "previousSlide": "Previous slide",
+        "nextSlide": "Next slide",
+        "goToSlide": "Go to slide {number}"
+      }
+    },
+
+    "booking": {
+      "destinationLabel": "Destination or Tour",
+      "destinationPlaceholder": "Where do you want to go?",
+      "dateLabel": "Dates",
+      "datePlaceholder": "Add your date",
+      "passengersLabel": "Passengers",
+      "passengerOption": "{count, plural, one {# Traveler} other {# Travelers}}",
+      "searchButton": "Search",
+      "searchAriaLabel": "Search tours",
+      "tripTypeLabel": "Trip Type",
+      "tripTypePlaceholder": "Any type",
+      "couponLabel": "Coupon",
+      "couponPlaceholder": "Code",
+      "whatsappButton": "Direct WhatsApp",
+      "availabilityHeader": "Availability / Tours & Packages",
+      "tripTypes": {
+        "adventure": "Adventure",
+        "cultural": "Cultural",
+        "family": "Family",
+        "archaeological": "Archaeological",
+        "private": "Private"
+      }
+    },
+
+    "featured": {
+      "defaultTitle": "Find the adventure perfect for you",
+      "defaultSubtitle": "Explore our carefully designed tour packages for an unforgettable experience.",
+      "viewAllTours": "View all tours"
+    },
+
+    "promotions": {
+      "title": "SAVE ON YOUR TRIP TO PERU",
+      "subtitle": "Discover exclusive offers on the most incredible destinations in Peru, only with us",
+      "cards": {
+        "0": {
+          "tag": "Use coupon MAGIA10",
+          "title": "TRAVEL WITH 10% OFF",
+          "description": "Limited time offer. Terms and conditions apply.",
+          "cta": "Book now"
+        },
+        "1": {
+          "tag": "Applied automatically",
+          "title": "5% OFF Roundtrip",
+          "description": "Automatically applied to round-trip journeys. Terms and conditions apply.",
+          "cta": "Book now"
+        },
+        "2": {
+          "tag": "Coupon: ADVENTURE20",
+          "title": "20% OFF on Treks",
+          "description": "On selected Salkantay and Inca Trail routes. Valid this week.",
+          "cta": "Book now"
+        }
+      }
+    },
+
+    "whyUs": {
+      "title": "Why Choose Us?",
+      "subtitle": "We are experts in creating unforgettable experiences in the heart of the Inca Empire.",
+      "features": {
+        "localExperience": {
+          "title": "Certified Local Experience",
+          "description": "Over 10 years operating tours in Cusco and Machu Picchu with certified guides."
+        },
+        "securePayments": {
+          "title": "100% Secure Payments",
+          "description": "Accept credit cards, debit cards, and PayPal with SSL encryption."
+        },
+        "allInclusive": {
+          "title": "All-Inclusive",
+          "description": "Entrance fees, transportation, professional guide, and meals on every tour."
+        },
+        "happyTravelers": {
+          "title": "500+ Happy Travelers",
+          "description": "Average rating of 4.9/5 stars across all our experiences."
+        },
+        "flexibleCancellation": {
+          "title": "Flexible Cancellation",
+          "description": "Cancel up to 48 hours in advance at no extra cost."
+        },
+        "support": {
+          "title": "24/7 Support",
+          "description": "Assistance in English and Spanish before, during, and after your trip."
+        }
+      }
+    },
+
+    "testimonials": {
+      "title": "What Our Travelers Say",
+      "subtitle": "Over 500 adventurers have already had the experience. These are their stories.",
+      "ariaLabels": {
+        "previous": "Previous",
+        "next": "Next"
+      },
+      "items": {
+        "0": {
+          "name": "María García",
+          "country": "🇪🇸 Spain",
+          "title": "A magical experience",
+          "text": "The Machu Picchu tour exceeded all my expectations. The guide was incredible, the organization was perfect, and the scenery was simply stunning. I recommend it 100%!"
+        },
+        "1": {
+          "name": "Carlos Mendoza",
+          "country": "🇲🇽 Mexico",
+          "title": "Top-notch professionalism",
+          "text": "From booking to the end of the tour, everything was flawless. The team genuinely cares about giving you the best experience. We'll definitely be back."
+        },
+        "2": {
+          "name": "Ana Rodríguez",
+          "country": "🇨🇴 Colombia",
+          "title": "The best tour of my life",
+          "text": "I traveled solo and felt completely safe and looked after. The Sacred Valley landscapes are out of this world. The included meals were delicious."
+        },
+        "3": {
+          "name": "John Smith",
+          "country": "🇺🇸 United States",
+          "title": "Exceeded all expectations",
+          "text": "I've traveled extensively in South America, but this tour company truly stands out. The attention to detail and local knowledge made our Machu Picchu visit unforgettable."
+        },
+        "4": {
+          "name": "Luciana Torres",
+          "country": "🇵🇪 Peru",
+          "title": "Proud to recommend",
+          "text": "As a Peruvian, I truly value quality service. This team knows every corner of Cusco and makes you experience Inca history like nobody else."
+        }
+      }
+    },
+
+    "cta": {
+      "title": "Your Machu Picchu Adventure Awaits",
+      "subtitle": "Book today and secure your spot at one of the wonders of the world. Limited spots per group for a personalized experience.",
+      "exploreTours": "Explore Tours",
+      "contactUs": "Contact Us"
+    },
+
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know before your adventure.",
+      "items": {
+        "0": {
+          "question": "How far in advance should I book my Machu Picchu tour?",
+          "answer": "We recommend booking at least 2 weeks in advance, especially during peak season (June–August). Group sizes are limited to ensure a personalized experience."
+        },
+        "1": {
+          "question": "What's included in the tour price?",
+          "answer": "Our tours include transportation from your hotel in Cusco, entrance to archaeological sites, a bilingual professional guide, and a buffet lunch. Some premium tours include the return train ride."
+        },
+        "2": {
+          "question": "Is it safe to travel to Machu Picchu?",
+          "answer": "Yes, it's completely safe. Cusco and Machu Picchu are well-organized tourist destinations. Our guides are certified in first aid and carry emergency kits. We also offer optional travel insurance."
+        },
+        "3": {
+          "question": "What should I bring on the tour?",
+          "answer": "Original passport (required), sunscreen, hat, water, comfortable layered clothing, trekking shoes, rain jacket (November–March), and a camera."
+        },
+        "4": {
+          "question": "Can I cancel or reschedule my booking?",
+          "answer": "Yes, we offer free cancellation up to 48 hours before the tour. For rescheduling, contact us at least 24 hours in advance and we'll adjust the date at no extra cost, subject to availability."
+        },
+        "5": {
+          "question": "Are there age or fitness restrictions?",
+          "answer": "Most of our tours are suitable for all ages. However, some trekking tours (Rainbow Mountain, Salkantay) require good physical fitness. We recommend acclimatizing for 2–3 days in Cusco before high-altitude tours."
+        },
+        "6": {
+          "question": "What payment methods do you accept?",
+          "answer": "We accept credit and debit cards (Visa, Mastercard, American Express) through Culqi, as well as PayPal for international payments. All payments are processed with SSL encryption."
+        }
+      }
+    },
+
+    "seo": {
+      "title": "Live unique experiences in Peru's most incredible destinations",
+      "content": "Discover the magic of Peru with Machupicchu Travel Adventure. Travel through extraordinary destinations with tours designed to offer you an authentic, safe experience full of moments you will remember forever."
+    }
+  },
+
+  "tours": {
+    "listing": {
+      "pageTitle": "Tours & Packages",
+      "pageSubtitle": "Find the perfect adventure. From the mysticism of the Sacred Valley to the majesty of Machu Picchu.",
+      "showingResults": "Showing {count} results",
+      "resultsFound": "{count} results found",
+      "noToursFound": "No tours found",
+      "noToursHint": "Try adjusting your search filters.",
+      "clearFilters": "Clear filters",
+      "sortLabel": "Sort by:",
+      "sortLabelShort": "Sort:",
+      "sortOptions": {
+        "recommended": "Recommended",
+        "priceLow": "Lowest Price",
+        "priceHigh": "Highest Price",
+        "topRated": "Top Rated"
+      },
+      "pagination": {
+        "previous": "Previous",
+        "next": "Next"
+      }
+    },
+
+    "detail": {
+      "backToTours": "Back to Tours",
+      "location": "Cusco, Peru",
+      "tourDescription": "Tour Description",
+      "whatIsIncluded": "What's included in this package?",
+      "importantInfo": "Important Information",
+      "importantInfoText": "Booking this tour requires confirming as far in advance as possible due to high demand for the citadel. No refunds for tickets already issued by the Ministry of Culture.",
+      "viewGallery": "View Gallery +12",
+      "galleryAlt": "Tour gallery",
+      "notFound": "Not found"
+    },
+
+    "filters": {
+      "title": "Filters",
+      "clear": "Clear",
+      "closeFilters": "Close filters",
+      "searchPlaceholder": "Search tour by name...",
+      "categoryLabel": "Category",
+      "durationLabel": "Duration",
+      "destinationLabel": "Destination",
+      "applyFilters": "Apply Filters",
+      "durationOptions": {
+        "half": "Half Day (4–6 hrs)",
+        "full": "Full Day (10–14 hrs)",
+        "multi": "Multi-Day (2+ days)"
+      }
+    },
+
+    "booking": {
+      "pricePerAdultFrom": "Price per adult from",
+      "departureDate": "Departure Date",
+      "loadingAvailability": "Loading availability...",
+      "selectDateHint": "* Select a date to check real-time availability.",
+      "passengersAndClasses": "Passengers & Classes",
+      "adults": "Adults (12+)",
+      "children": "Children (ages 4–11)",
+      "pricePerUnit": "USD {price} each",
+      "totalToPay": "Total Due:",
+      "selectDateError": "Please select a date for the tour.",
+      "addedToCart": "Added to Cart!",
+      "addedToCartShort": "Added!",
+      "bookNow": "Book Now",
+      "bookNowShort": "Book",
+      "confirmationNote": "Instant confirmation. 100% secure payment.",
+      "from": "From"
+    },
+
+    "card": {
+      "from": "From",
+      "off": "{percent}% OFF"
+    }
+  },
+
+  "cart": {
+    "title": "Your Travel Cart",
+    "emptyTitle": "You haven't added any adventures yet",
+    "emptyDescription": "Discover the magic of the Andes with our tours.",
+    "exploreTours": "Explore Tours",
+    "noImage": "No image",
+    "dateLabel": "Date:",
+    "dateFormat": "MMMM dd, yyyy",
+    "passengersLabel": "Passengers:",
+    "adultsLabel": "{count} Adults",
+    "childrenLabel": "{count} Children",
+    "edit": "Edit",
+    "continueShopping": "Continue shopping",
+    "orderSummary": "Order Summary",
+    "subtotal": "Subtotal ({count} tours)",
+    "taxes": "Taxes (IGV)",
+    "taxesIncluded": "Included",
+    "total": "Total",
+    "continueToPayment": "Continue to Payment"
+  },
+
+  "checkout": {
+    "steps": {
+      "cart": "Cart",
+      "payment": "Ticket Payment",
+      "paymentShort": "Payment"
+    },
+    "registerPassengers": "Register Your Passengers",
+    "contactPerson": {
+      "title": "Contact Person",
+      "description": "This person will receive the tickets via email and will be contacted if necessary.",
+      "phonePlaceholder": "Phone number",
+      "emailPlaceholder": "Email address"
+    },
+    "passenger": {
+      "adultTitle": "Adult {number}",
+      "childTitle": "Child {number}",
+      "firstNamePlaceholder": "Full first name",
+      "lastNamePlaceholder": "Full last name",
+      "birthDatePlaceholder": "MM/DD/YYYY (Date of birth)",
+      "docNumberPlaceholder": "Document number"
+    },
+    "nationality": {
+      "peru": "🇵🇪 Peru",
+      "usa": "🇺🇸 United States",
+      "spain": "🇪🇸 Spain",
+      "colombia": "🇨🇴 Colombia",
+      "mexico": "🇲🇽 Mexico",
+      "chile": "🇨🇱 Chile",
+      "other": "🌎 Other"
+    },
+    "docType": {
+      "dni": "DNI",
+      "passport": "Passport",
+      "foreignId": "Foreign ID"
+    },
+    "payment": {
+      "selectMethod": "Select Payment Method",
+      "creditDebitCard": "Credit or Debit Card",
+      "cardNumberPlaceholder": "Card Number",
+      "expiryPlaceholder": "MM/YY",
+      "cvcPlaceholder": "CVC",
+      "securePayments": "Secure encrypted payments",
+      "paypalDescription": "Pay quickly and securely with your PayPal account.",
+      "processing": "Processing...",
+      "continueToPay": "Continue to pay USD {total}"
+    },
+    "policies": {
+      "acceptTerms": "I accept the Terms & Conditions and Privacy Policy",
+      "termsAndConditions": "Terms & Conditions",
+      "privacyPolicy": "Privacy Policy",
+      "acceptMarketing": "I agree to receive exclusive discounts, promotions, and updates (Optional)"
+    },
+    "sidebar": {
+      "orderSummary": "Your order summary ({count})",
+      "adultsLabel": "{count} Adults",
+      "childrenLabel": "{count} Children",
+      "edit": "Edit",
+      "delete": "Remove",
+      "total": "Total"
+    },
+    "errors": {
+      "bookingRegistration": "Error registering the booking in the system.",
+      "paymentRejected": "Payment declined: {error}",
+      "networkError": "Network error connecting to the payment gateway.",
+      "paymentNotCompleted": "The payment could not be completed.",
+      "paypalError": "An error occurred with PayPal."
+    }
+  },
+
+  "pages": {
+    "about": {
+      "title": "About Us",
+      "subtitle": "Connecting travelers from around the world with Peru's ancient magic.",
+      "ourStory": "Our Story",
+      "storyParagraph1": "Founded in the heart of Cusco by passionate local guides, Machu Picchu Travel Adventures was born with the firm purpose of sharing the ancestral richness of the Inca Empire in an authentic, safe, and memorable way. What began as a dream to connect travelers with our roots has today become one of the most trusted and recommended travel agencies and inbound tour operators in the region.",
+      "storyParagraph2": "Our guides are certified native Cusqueños who not only master the history, geography, and local archaeology but live and breathe Andean culture, transmitting that mysticism in every guided tour. We focus on sustainable tourism that actively supports the reforestation of Machu Picchu and the social development of high-Andean communities.",
+      "stats": {
+        "yearsExperience": "Years of experience",
+        "happyTravelers": "Happy travelers",
+        "toursOperated": "Tours operated",
+        "averageRating": "Average rating"
+      },
+      "ourValues": "Our Values",
+      "values": {
+        "security": {
+          "title": "Safety",
+          "description": "Your well-being is our priority. Guides certified in first aid and emergency protocols."
+        },
+        "passion": {
+          "title": "Passion",
+          "description": "We love what we do. Every tour is designed with dedication to create magical moments."
+        },
+        "sustainability": {
+          "title": "Sustainability",
+          "description": "Committed to responsible tourism and the preservation of cultural and natural heritage."
+        },
+        "community": {
+          "title": "Community",
+          "description": "We work with local communities to offer authentic experiences and benefit the region."
+        },
+        "excellence": {
+          "title": "Excellence",
+          "description": "We strive to exceed expectations in every detail of your journey."
+        },
+        "localKnowledge": {
+          "title": "Local Knowledge",
+          "description": "Born and raised in Cusco, we know every corner of the land of the Incas."
+        }
+      },
+      "sustainabilityTitle": "Social Commitment & Reforestation",
+      "sustainabilityText": "At Machu Picchu Travel Adventure, we are committed to preserving our natural heritage. We actively finance the reforestation campaign of more than 10,000 native trees in the Vilcanota River basin and the buffer zones of the Inca citadel. We firmly believe that every trip should leave a positive footprint on our land.",
+      "reforestationAlt": "Reforestation in Machu Picchu",
+      "bookingTipsTitle": "Essential Booking Tips",
+      "bookingTips": [
+        "Book your Machu Picchu entry tickets at least 30 days in advance due to high demand.",
+        "Acclimatize in Cusco for 1 or 2 days before doing demanding high-altitude treks like Rainbow Mountain.",
+        "Verify that your tour operator is a formal agency with current official operation permits.",
+        "Always carry your original physical passport or ID; entry tickets are non-transferable."
+      ],
+      "licensesTitle": "Official Licenses & Permits",
+      "licensesSubtitle": "We guarantee total formality and safety with active operation permits.",
+      "rucLabel": "RUC (Tax ID)",
+      "rucVal": "20564458385",
+      "companyNameLabel": "Registered Name",
+      "companyNameVal": "Machu Picchu Travel Adventure E.I.R.L.",
+      "minceturLabel": "DIRCETUR Registry",
+      "minceturVal": "Tourist Operator Constancy N° 1245-2026/GR-CUSCO",
+      "sernanpLabel": "SERNANP Permit",
+      "sernanpVal": "Special Inca Trail Operation Permit N° 088-2026",
+      "selloBadge": "Certified Travel Agency",
+      "ctaUs": "Plan My Trip with an Advisor"
+    },
+
+    "blog": {
+      "title": "Travel Blog",
+      "subtitle": "Tips, guides, and stories to inspire your next adventure.",
+      "readMore": "Read more",
+      "recommendedTours": "Recommended Tours",
+      "viewTour": "View Tour",
+      "ticketWidget": {
+        "title": "Do you need your Machu Picchu ticket?",
+        "subtitle": "Tickets sell out months in advance. We can help you secure one if you don't have it yet.",
+        "optionYes": "Yes, I need a ticket",
+        "optionYesSub": "Help me book the complete experience.",
+        "optionNo": "No, I don't need a ticket",
+        "optionNoSub": "I only need the train service and tour guide.",
+        "continue": "Continue",
+        "whatsappYes": "Hello! I am reading the blog and need help booking my Machu Picchu ticket along with the complete experience.",
+        "whatsappNo": "Hello! I already have my Machu Picchu ticket, but I need to book the train service and tour guide."
+      },
+      "posts": {
+        "0": {
+          "slug": "10-essential-tips-for-visiting-machu-picchu",
+          "title": "10 Essential Tips for Visiting Machu Picchu",
+          "excerpt": "Everything you need to know before your first visit to the Inca citadel. From acclimatization to what to pack in your backpack.",
+          "date": "May 15, 2026",
+          "readTime": "5 min",
+          "category": "Travel Tips",
+          "author": "Machu Picchu Travel",
+          "intro": "Visiting the magical citadel of Machu Picchu is undoubtedly one of the most desired experiences for travelers worldwide. However, due to its geographic location and conservation regulations, planning this trip requires some preparation. To make your adventure seamless and perfect, we have prepared a list of the 10 most essential tips you should keep in mind.",
+          "sections": [
+            {
+              "title": "1. Book your tickets well in advance",
+              "paragraphs": [
+                "Machu Picchu entrance tickets have a strict daily limit established by the Peruvian government to protect the archaeological heritage. During high season (May to October), tickets can sell out 3 to 4 months in advance. We advise you to book as soon as you decide on your travel dates using a trusted service like our [Machu Picchu Full Day](/tours/machu-picchu-full-day), choosing the circuit that best fits your physical expectations and exploration goals."
+              ]
+            },
+            {
+              "title": "2. Understand the new visiting circuits",
+              "paragraphs": [
+                "Machu Picchu is no longer explored freely. Currently, there are three one-way circuits: Circuit 1 (panoramic and high terraces), Circuit 2 (classic and complete, the most recommended), and Circuit 3 (lower part and royal areas). Make sure to choose the correct ticket, as once inside you cannot change routes or go back on your steps."
+              ]
+            },
+            {
+              "title": "3. Plan for altitude acclimatization",
+              "paragraphs": [
+                "The city of Cusco is located at about 3,400 meters (11,150 feet) above sea level, while Machu Picchu is at about 2,430 meters (7,970 feet). Altitude sickness or 'soroche' is very common upon arrival. The ideal is to spend at least 1 or 2 days in Cusco or the Sacred Valley (which is at a lower altitude) before doing demanding hikes like the famous [Rainbow Mountain (Vinicunca)](/tours/montana-de-colores-vinicunca). Drink plenty of water, sip hot coca tea, and avoid heavy meals for the first few days."
+              ]
+            },
+            {
+              "title": "4. Hire an official tour guide",
+              "paragraphs": [
+                "Exploring Machu Picchu without a guide is missing half the magic. Official guides will reveal the history of the temples, the sophisticated agricultural terrace system, the astronomical alignments, and the theories behind its abandonment. You can hire a certified guide in advance through our agency or at the gates of the sanctuary."
+              ]
+            },
+            {
+              "title": "5. Choose the ideal mode of transportation",
+              "paragraphs": [
+                "To reach Aguas Calientes (Machu Picchu Town), the fastest and most comfortable way is by train from Ollantaytambo or Poroy. If you are looking for a unique and adventurous experience, the classic 4-day Inca Trail or the short 2-day route are excellent choices. Plan your rail connections and bus transfers carefully to avoid missing your entry times."
+              ]
+            },
+            {
+              "title": "6. Dress in layers and prepare for the weather",
+              "paragraphs": [
+                "Machu Picchu is located in a cloud forest zone, meaning the weather is highly changeable. Early in the morning it can be very cold and misty, but by midday the sun can be intense. We recommend dressing in layers: a breathable t-shirt, a light fleece, a windbreaker or rain jacket, and comfortable trousers."
+              ]
+            },
+            {
+              "title": "7. Bring insect repellent and sunscreen",
+              "paragraphs": [
+                "Surrounded by humid subtropical forest, Machu Picchu is home to very small mosquitoes whose bites cause intense itching. Always bring a good insect repellent and apply it regularly. Similarly, the high-altitude sun can burn your skin quickly, so wear a hat and high-factor sunscreen."
+              ]
+            },
+            {
+              "title": "8. Know the luggage restrictions and prohibited items",
+              "paragraphs": [
+                "Machu Picchu regulations prohibit entry with backpacks exceeding 40x35x20 cm, large umbrellas (rain ponchos are allowed), tripods or camera stabilizers, drones, and single-use plastic containers. There is a locker service at the entrance where you can leave your belongings for an extra fee."
+              ]
+            },
+            {
+              "title": "9. Carry cash in Soles",
+              "paragraphs": [
+                "Although many shops in Aguas Calientes accept credit cards, it is essential to carry cash in Peruvian Soles (PEN). You will need it to pay for the public restrooms located only outside the sanctuary, buy reusable water bottles, snacks, or tip your guides."
+              ]
+            },
+            {
+              "title": "10. Get the official Machu Picchu stamp in your passport",
+              "paragraphs": [
+                "As a special keepsake of your visit, don't forget to stamp your passport with the commemorative Machu Picchu stamp. There is a small office with a self-service wooden stamp right next to the exit of the archaeological park. It is free and represents a beautiful souvenir of your journey to Peru."
+              ]
+            }
+          ],
+          "conclusion": "Visiting Machu Picchu is a life-changing experience. Planning every detail ahead of time will not only save you stress but also allow you to fully immerse yourself in the majesty of this sacred place. If you want us to organize your complete trip from start to finish, don't hesitate to contact our travel advisors."
+        },
+        "1": {
+          "slug": "sacred-valley-the-hidden-gem-of-the-andes",
+          "title": "Sacred Valley: The Hidden Gem of the Andes",
+          "excerpt": "Discover why the Sacred Valley of the Incas is much more than just a gateway to Machu Picchu.",
+          "date": "May 10, 2026",
+          "readTime": "7 min",
+          "category": "Destinations",
+          "author": "Machu Picchu Travel",
+          "intro": "The Sacred Valley of the Incas is one of the most beautiful and historic destinations in the Cusco region. Stretching along the Vilcanota River, this fertile valley boasts an exceptional mild climate and houses breathtaking archaeological complexes that rival the beauty of Machu Picchu itself. In this guide, we discover the main attractions that make the Sacred Valley an essential stop on your trip.",
+          "sections": [
+            {
+              "title": "Pisac: Imperial ruins and traditional market",
+              "paragraphs": [
+                "Located about 30 kilometers from Cusco, Pisac is famous for its stunning archaeological complex perched high on a mountain. Walking through its agricultural terraces, ceremonial temples, and ancient Inca cemetery is an amazing experience. In the lower town, the Pisac artisan market comes alive with colorful textiles, handmade ceramics, and beautiful silver jewelry."
+              ]
+            },
+            {
+              "title": "Ollantaytambo: The last living Inca town",
+              "paragraphs": [
+                "Ollantaytambo is one of the few places in Peru where residents still live in original Inca constructions. Its cobbled streets, running water channels, and traditional houses will transport you back in time. The imposing military fortress crowning the town was the site of one of the few battles where the Incas defeated the Spanish conquistadors, offering spectacular views of the valley."
+              ]
+            },
+            {
+              "title": "Maras and Moray: Millenary salt pans and agricultural laboratories",
+              "paragraphs": [
+                "The salt pans of Maras are a stunning visual spectacle: over 3,000 pink salt pools fed by a warm underground spring that have been harvested since pre-Inca times. Nearby lies Moray, a set of impressive concentric agricultural terraces resembling an amphitheater. Moray worked as an Inca agricultural research laboratory, where they experimented with different crops under specific microclimates."
+              ]
+            },
+            {
+              "title": "Chinchero: The town of the rainbow and cradle of Andean weaving",
+              "paragraphs": [
+                "Situated at a high altitude, Chinchero retains a very pure Andean charm. It houses a beautiful colonial church built over an Inca palace and extensive agricultural terraces. However, its main attraction lies in its traditional weaving centers, where local women dressed in typical attire demonstrate the washing, spinning, and dyeing of alpaca wool using only local plants, flowers, and minerals."
+              ]
+            }
+          ],
+          "conclusion": "The Sacred Valley offers a fascinating journey through the history, living culture, and natural landscapes of the Andes. We recommend spending at least two full days exploring its wonders before continuing to Machu Picchu. Check out our daily [Sacred Valley VIP](/tours/valle-sagrado-vip) tour or the [Sacred Valley Traditional](/tours/valle-sagrado-tradicional) tour to plan your perfect itinerary."
+        },
+        "2": {
+          "slug": "complete-guide-rainbow-mountain-vinicunca",
+          "title": "Complete Guide: Rainbow Mountain (Vinicunca)",
+          "excerpt": "Altitude, difficulty, best season, and everything you need for this one-of-a-kind hike.",
+          "date": "May 5, 2026",
+          "readTime": "6 min",
+          "category": "Travel Tips",
+          "author": "Machu Picchu Travel",
+          "intro": "The Mountain of Seven Colors, also known as Vinicunca, has become the second most visited tourist attraction in Cusco after Machu Picchu. This extraordinary natural landscape, situated at a high altitude, resembles an oil painting with its stripes of reddish, golden, green, and purple hues. To enjoy this demanding but wonderful hike, we present our complete preparation guide.",
+          "sections": [
+            {
+              "title": "Where do the colors of Vinicunca come from?",
+              "paragraphs": [
+                "The surprising coloration of the mountain is due to a complex geological history and the accumulation of different mineral layers deposited over millions of years. The red hue comes from clay rich in iron; pink stripes are caused by red clay and mud; green is the result of phyllites and clays rich in magnesium and iron; golden hues are due to calcareous sandstones rich in sulfur; and purple comes from limonite."
+              ]
+            },
+            {
+              "title": "The Altitude: The real challenge of the trail",
+              "paragraphs": [
+                "The hike to Vinicunca is not technically difficult or steep, but the altitude is the real challenge. The route begins at about 4,600 meters (15,090 feet) high, and the main viewpoint is located at the astonishing altitude of 5,036 meters (16,520 feet) above sea level. At this elevation, the air is thinner and oxygen is scarce. Therefore, it is absolutely mandatory to have spent at least 2 or 3 days acclimatizing in Cusco or the Sacred Valley before attempting this hike."
+              ]
+            },
+            {
+              "title": "Tips for a successful hike",
+              "paragraphs": [
+                "To fully enjoy the hike, we advise you to walk at your own steady, unhurried pace and breathe deeply. Using trekking poles is highly useful for balance and reducing knee strain. Bring coca leaves to chew or pills for soroche. Additionally, you can rent a horse from local residents at the start of the trail if you feel the physical effort is too much."
+              ]
+            },
+            {
+              "title": "What to pack in your daypack",
+              "paragraphs": [
+                "The weather in the high mountains is extremely cold and windy, but the hike will raise your body temperature. Dress in light thermal layers and bring a high-quality windbreaker jacket. Don't forget a wool hat, gloves, high-factor sunscreen (radiation is very high at altitude), sunglasses, and enough water to stay hydrated. Also bring cash to pay for the restrooms along the route."
+              ]
+            }
+          ],
+          "conclusion": "Reaching the Vinicunca viewpoint and contemplating the rainbow earth in front of the imposing Mount Ausangate is an experience you will remember for the rest of your life. With proper preparation and responsible acclimatization, you will conquer this Andean peak safely. Join our daily tour to [Rainbow Mountain](/tours/montana-de-colores-vinicunca) with certified guides and transportation included."
+        },
+        "3": {
+          "slug": "cusco-cuisine-flavors-you-cant-miss",
+          "title": "Cusco Cuisine: Flavors You Can't Miss",
+          "excerpt": "A journey through Cusco's traditional dishes that every traveler should try during their stay.",
+          "date": "May 1, 2026",
+          "readTime": "4 min",
+          "category": "Gastronomy",
+          "author": "Machu Picchu Travel",
+          "intro": "Cusco is not only the archaeological capital of America but also an exceptional gastronomic destination that delights the most demanding palates. Cusco cuisine stands out for fusing millenary Andean ingredients (such as quinoa, native potatoes, giant corn, and aromatic herbs) with contemporary Spanish and Creole cooking techniques. In this guide, we invite you to discover the traditional dishes and ingredients you must try during your visit.",
+          "sections": [
+            {
+              "title": "Pachamanca: The sacred feast under the earth",
+              "paragraphs": [
+                "Pachamanca is not just a plate of food; it is an ancient Andean ritual of gratitude to Mother Earth (Pachamama). It consists of cooking different types of meat (chicken, pork, lamb, alpaca) and tubers (potatoes, sweet potatoes, broad beans) using preheated stones placed in an oven dug into the ground. Everything is covered with banana leaves, local aromatic herbs like huacatay, and soil, achieving a slow cook with unmatched smoky flavors."
+              ]
+            },
+            {
+              "title": "Alpaca Lomo Saltado: A Peruvian classic with an Andean twist",
+              "paragraphs": [
+                "Alpaca lomo saltado is the flagship dish of Chinese-Peruvian fusion cuisine. In Cusco, local and gourmet restaurants often prepare this delicacy by substituting beef with alpaca meat, a highly tender, lean, healthy, and low-cholesterol option. Sautéed in a wok over high heat with onions, tomatoes, yellow pepper, and fresh cilantro, it is served with crispy native French fries and hot white rice."
+              ]
+            },
+            {
+              "title": "Cuy Chactado and Roasted: Ancient Andean tradition",
+              "paragraphs": [
+                "The cuy (guinea pig) has been one of the most important sources of protein in the Andean diet since the Inca era. In traditional Cusco picanterías, it is served roasted, seasoned with herbs like huacatay and accompanied by stuffed rocoto pepper and potatoes, or deep-fried under a heavy stone (Cuy Chactado), which gives it a very crispy texture. It is a dish full of tradition and local flavor."
+              ]
+            },
+            {
+              "title": "Chairo and Cusco soups for the cold",
+              "paragraphs": [
+                "For cold Andean nights, there is nothing better than a hot Cusco soup. Chairo is a hearty, thick soup made of chuño (dehydrated potato), mutton, beef, wheat, corn hominy, and vegetables. Another delicious specialty is Quinoa Soup, nutritious and comforting. Always accompany them with a hot cup of coca or muña tea, herbs that significantly aid digestion at high altitude."
+              ]
+            }
+          ],
+          "conclusion": "Exploring Cusco through its flavors is a wonderful cultural experience. From rustic traditional picanterías to the most award-winning gourmet restaurants, Cusco has a culinary proposal that will surprise you. If you want to experience the preparation of traditional Andean Pachamanca up close, book our [Pachamanca Tour in Chinchero](/tours/pachamanca-full-day) today."
+        }
+      }
+    },
+
+    "routes": {
+      "title": "Routes to Machu Picchu",
+      "subtitle": "Discover the different ways to reach the wonder of the world.",
+      "difficultyLabel": "Difficulty: {level}",
+      "viewAvailableTours": "View Available Tours",
+      "items": {
+        "0": {
+          "title": "Train from Ollantaytambo",
+          "description": "The most popular and comfortable route. A scenic 1.5-hour journey through the Sacred Valley to Aguas Calientes.",
+          "duration": "1.5 hours",
+          "difficulty": "Easy",
+          "highlights": ["Spectacular scenery", "Onboard service", "Ideal for families"]
+        },
+        "1": {
+          "title": "Train from Poroy (Cusco)",
+          "description": "Departs directly from Poroy station, near Cusco. A full 3.5-hour journey with incredible views.",
+          "duration": "3.5 hours",
+          "difficulty": "Easy",
+          "highlights": ["Departs from Cusco", "No transfers needed", "Panoramic views"]
+        },
+        "2": {
+          "title": "Classic Inca Trail",
+          "description": "South America's most famous trek. 4 days through Andean landscapes and Inca ruins to the Sun Gate.",
+          "duration": "4 days / 3 nights",
+          "difficulty": "Moderate–High",
+          "highlights": ["Epic experience", "Enter via Sun Gate", "Campsites"]
+        },
+        "3": {
+          "title": "Salkantay Trek",
+          "description": "A spectacular alternative to the Inca Trail. Cross the Salkantay snow-capped mountain pass at 15,200 ft elevation.",
+          "duration": "5 days / 4 nights",
+          "difficulty": "High",
+          "highlights": ["Glaciers", "Climate diversity", "No permit limit"]
+        }
+      }
+    },
+
+    "success": {
+      "title": "Booking Confirmed!",
+      "subtitle": "Your trip to the magic of Peru is guaranteed. We've sent the details to your email.",
+      "bookingCode": "Booking Code",
+      "whatNext": "What's next?",
+      "steps": {
+        "1": "Check your inbox or spam folder. We've sent your e-tickets, which you'll need to present on the day of the tour.",
+        "2": "Bring your original ID (Passport or National ID).",
+        "3": "Arrive at the meeting point 30 minutes before the scheduled time."
+      },
+      "viewMoreDestinations": "View More Destinations",
+      "backToHome": "Back to Home",
+      "downloadPDF": "Download PDF",
+      "addToCalendar": "Add to Calendar",
+      "calendarEvent": {
+        "summary": "Machu Picchu Tour - Booking {code}",
+        "description": "Your tour with Machu Picchu Travel Adventures.\nBooking code: {code}\nBring your original ID.\nMeeting point: 30 min before scheduled time.",
+        "location": "Cusco, Peru",
+        "reminder": "Your tour starts in 1 hour"
+      }
+    },
+
+    "login": {
+      "title": "Admin Portal",
+      "subtitle": "Enter your credentials to manage bookings and tours.",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "admin@machupicchu.com",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "••••••••",
+      "submitButton": "Log In",
+      "loading": "Logging In..."
+    },
+
+    "notFound": {
+      "title": "Page Not Found",
+      "description": "The page you're looking for doesn't exist or has been moved. Perhaps you'd like to explore our tours?",
+      "goHome": "Go to Home",
+      "exploreTours": "Explore Tours"
+    },
+
+    "error": {
+      "title": "Something Went Wrong",
+      "description": "We're sorry, an unexpected error occurred. Please try again.",
+      "tryAgain": "Try Again",
+      "goHome": "Go to Home"
+    },
+    "experiences": {
+      "title": "Travel Experiences",
+      "subtitle": "Discover the testimonials and photos of travelers who made their dreams come true with us.",
+      "whyUsTitle": "Why Travel With Us?",
+      "whyUsText": "At Machu Picchu Travel Adventure, we strive to make every detail of your trip perfect. Our priority is to provide you with an unforgettable, comfortable, and safe adventure in the wonders of Cusco and Peru. Explore the photographs taken by our own passengers!",
+      "galleryButton": "View our passengers' photos",
+      "formTitle": "Request Personalized Advising",
+      "formSubtitle": "Speak directly with a travel advisor and plan your ideal itinerary in Cusco and Machu Picchu.",
+      "formName": "Full Name",
+      "formEmail": "Email Address",
+      "formInterest": "Destination of Interest",
+      "formDate": "Estimated Date",
+      "formSubmit": "Send Inquiry via WhatsApp",
+      "reviewsTitle": "Passenger Reviews",
+      "whyBuyTitle": "Why Buy Everything With Us?",
+      "benefits": {
+        "allInOne": {
+          "title": "All-in-One Payment",
+          "description": "Avoid coordinating multiple providers. We handle tickets, trains, guides, and transfers."
+        },
+        "support": {
+          "title": "24/7 Support and Assistance",
+          "description": "We are with you before, during, and after your trip through a direct assistance hotline."
+        },
+        "flexibility": {
+          "title": "Date Flexibility",
+          "description": "Hassle-free date rescheduling and cancellations under fair policies."
+        },
+        "directOperator": {
+          "title": "Direct Local Operator",
+          "description": "We are authorized operators in Cusco, with no intermediaries. We guarantee the most competitive rates."
+        }
+      }
+    },
+    "contact": {
+      "title": "Contact Us",
+      "subtitle": "We are here to help you plan your next unforgettable adventure.",
+      "formTitle": "Send a Message",
+      "formName": "Full Name",
+      "formEmail": "Email Address",
+      "formPhone": "Phone / WhatsApp",
+      "formMessage": "Message",
+      "formSubmit": "Send Message",
+      "linktreeTitle": "Quick Links",
+      "linktreeSocial": "Follow Us on Social Media",
+      "linktreeTours": "See All Packages",
+      "linktreeLocation": "See Exact Location",
+      "advisorsTitle": "Our Advisors",
+      "advisorsSubtitle": "Chat directly with our travel agents for immediate assistance.",
+      "locationTitle": "Location in Cusco",
+      "locationSubtitle": "Visit us at our main office in the imperial city.",
+      "bookingPromise": "Book your trip with us and make it a unique experience."
+    }
+  },
+
+  "common": {
+    "currency": "USD",
+    "from": "From",
+    "total": "Total",
+    "edit": "Edit",
+    "delete": "Remove",
+    "close": "Close",
+    "search": "Search",
+    "apply": "Apply",
+    "clear": "Clear",
+    "previous": "Previous",
+    "next": "Next",
+    "loading": "Loading...",
+    "adults": "Adults",
+    "children": "Children",
+    "exploreTours": "Explore Tours",
+    "explore": "Explore",
+    "bookNow": "Book Now",
+    "viewAll": "View all",
+    "client": "Client",
+    "jsonLdDescription": "Guided tours to Machu Picchu, Sacred Valley and Cusco. Authentic experiences with expert local guides."
+  },
+
+  "whatsapp": {
+    "tooltip": "Need help?",
+    "ariaLabel": "Contact via WhatsApp",
+    "defaultMessage": "Hi! I'm interested in getting more information about tours to Machu Picchu."
+  },
+
+  "meta": {
+    "home": {
+      "title": "Machu Picchu Travel Adventures | Tours to Machu Picchu, Cusco & Sacred Valley",
+      "titleTemplate": "%s | Machu Picchu Travel Adventures",
+      "description": "Book guided tours to Machu Picchu, Sacred Valley and Cusco. Expert guides, all-inclusive, secure payment. 500+ happy travelers.",
+      "ogTitle": "Machu Picchu Travel Adventures | Guided Tours in Peru",
+      "ogDescription": "Discover the magic of Machu Picchu with guided tours. Expert guides, all-inclusive, secure payment.",
+      "ogImageAlt": "Machu Picchu at sunrise",
+      "twitterDescription": "Guided tours to Machu Picchu and Cusco. Book now.",
+      "keywords": "machu picchu tours, cusco travel, sacred valley tour, peru tour packages, machu picchu excursions"
+    },
+    "toursPage": {
+      "title": "Tours & Packages to Machu Picchu | Machu Picchu Travel",
+      "description": "Discover the best guided tours in Cusco, Sacred Valley, and Machu Picchu."
+    },
+    "aboutPage": {
+      "title": "About Us",
+      "description": "Meet Machu Picchu Travel Adventures. Over 10 years creating unforgettable experiences in Cusco and Machu Picchu."
+    },
+    "blogPage": {
+      "title": "Travel Blog",
+      "description": "Tips, guides, and travel stories about Machu Picchu, Cusco, and Peru."
+    },
+    "routesPage": {
+      "title": "Routes to Machu Picchu",
+      "description": "Discover all available routes to reach Machu Picchu. Train, hiking, and combined options."
+    },
+    "experiencesPage": {
+      "title": "Passenger Experiences | Machu Picchu Travel Adventure",
+      "description": "Comments and photos of our passengers in Machu Picchu and all of Peru. Testimonials certified by TripAdvisor."
+    },
+    "contactPage": {
+      "title": "Contact | Plan your trip",
+      "description": "Get in touch with our official travel advisors. Write to us on WhatsApp or visit our office in Cusco."
+    }
+  }
+}
