@@ -60,27 +60,27 @@ export default function HeroSlider() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#213E4C]/80 via-transparent to-black/30" />
               
               {/* Split Modern Content */}
-              <div className="absolute inset-0 container mx-auto px-4 lg:px-12 flex items-center justify-between">
+              <div className="absolute inset-0 container mx-auto px-4 lg:px-12 flex items-center justify-between pt-14 pb-12 sm:py-0">
                 {/* Left Column: Youthful Bold Typography */}
-                <div className="max-w-2xl text-left z-10 pt-8 sm:pt-4">
-                  <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-4 sm:mb-6 tracking-tight leading-[1.08]">
+                <div className="max-w-2xl text-left z-10">
+                  <h2 className="text-[clamp(1.85rem,5.5vw+0.5rem,4.5rem)] font-extrabold text-white mb-3.5 sm:mb-6 tracking-tight leading-[1.08]">
                     {title}{' '}
-                    <span className="inline-block bg-primary text-white px-4 py-0.5 rounded-2xl shadow-lg shadow-primary/30 transform -rotate-1">
+                    <span className="inline-block bg-primary text-white px-3 sm:px-4 py-0.5 rounded-xl sm:rounded-2xl shadow-lg shadow-primary/30 transform -rotate-1">
                       {titleAccent}
                     </span>
                     {titleSuffix && <> {titleSuffix}</>}
                   </h2>
 
-                  <p className="text-base sm:text-lg md:text-xl text-white/90 font-normal max-w-xl mb-8 leading-relaxed">
+                  <p className="text-sm sm:text-lg md:text-xl text-white/90 font-normal max-w-xl mb-6 sm:mb-8 leading-relaxed line-clamp-3 sm:line-clamp-none">
                     {subtitle}
                   </p>
 
                   <div className="flex flex-wrap items-center gap-4">
                     <Link
                       href={slideCtaLinks[index]}
-                      className="bg-primary hover:bg-primary-dark text-white px-8 py-3.5 sm:py-4 rounded-2xl font-bold text-base sm:text-lg transition-all shadow-xl shadow-primary/40 hover:-translate-y-0.5 inline-flex items-center gap-2.5"
+                      className="bg-primary hover:bg-primary-dark text-white px-6 sm:px-8 py-3 sm:py-4 rounded-2xl font-bold text-sm sm:text-lg transition-all shadow-xl shadow-primary/40 hover:-translate-y-0.5 inline-flex items-center gap-2.5"
                     >
-                      <Compass className="w-5 h-5" />
+                      <Compass className="w-4.5 h-4.5 sm:w-5 sm:h-5" />
                       {cta}
                     </Link>
                   </div>
@@ -105,8 +105,8 @@ export default function HeroSlider() {
         })}
       </div>
 
-      {/* Navigation arrows positioned on bottom-right on desktop */}
-      <div className="absolute right-6 sm:right-12 bottom-8 sm:bottom-28 flex items-center gap-2 z-20">
+      {/* Navigation arrows positioned on bottom-right on tablet/desktop */}
+      <div className="hidden sm:flex absolute right-6 sm:right-12 bottom-16 sm:bottom-28 items-center gap-2 z-20">
         <button
           onClick={scrollPrev}
           className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-secondary/80 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-primary transition-all cursor-pointer"
@@ -144,7 +144,7 @@ function DotIndicators({ emblaApi, t }: { emblaApi: ReturnType<typeof useEmblaCa
   const count = emblaApi.scrollSnapList().length;
 
   return (
-    <div className="absolute bottom-6 sm:bottom-28 left-6 sm:left-12 flex gap-2 z-10">
+    <div className="absolute bottom-14 sm:bottom-28 left-4 sm:left-12 flex gap-2 z-10">
       {Array.from({ length: count }).map((_, i) => (
         <button
           key={i}

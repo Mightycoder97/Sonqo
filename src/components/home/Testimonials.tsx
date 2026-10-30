@@ -31,7 +31,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="bg-secondary py-20 lg:py-28 relative overflow-hidden">
+    <section className="bg-secondary py-14 sm:py-20 lg:py-28 relative overflow-hidden">
       {/* Vibrant Violet & Petrol Mesh Glow */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -top-24 -left-20 w-[420px] h-[420px] rounded-full bg-primary/35 blur-[110px]" />
@@ -39,16 +39,16 @@ export default function Testimonials() {
       </div>
       
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
-          <div className="max-w-2xl mb-6 md:mb-0">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-extrabold text-white mb-4 tracking-tight">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 sm:mb-12">
+          <div className="max-w-2xl">
+            <h2 className="text-[clamp(1.75rem,4vw+0.5rem,3rem)] font-serif font-extrabold text-white mb-3 sm:mb-4 tracking-tight leading-tight">
               {t('title')}
             </h2>
-            <p className="text-white/75 text-base sm:text-lg">
+            <p className="text-white/75 text-sm sm:text-lg">
               {t('subtitle')}
             </p>
           </div>
-          <div className="flex gap-3">
+          <div className="hidden sm:flex gap-3 mt-4 md:mt-0">
             <button
               onClick={() => scroll('left')}
               className="w-12 h-12 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-all cursor-pointer"
@@ -69,13 +69,13 @@ export default function Testimonials() {
         {/* Scroll container */}
         <div
           ref={scrollRef}
-          className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 -mx-4 px-4"
+          className="flex gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 -mx-4 px-4"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {Array.from({ length: testimonialCount }).map((_, index) => (
             <div
               key={index}
-              className="snap-start shrink-0 w-[85%] sm:w-[45%] lg:w-[31%] bg-white rounded-[28px] p-7 border border-white/20 shadow-[0_14px_35px_rgba(0,0,0,0.2)] flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300"
+              className="snap-start shrink-0 w-[84vw] max-w-[330px] sm:max-w-none sm:w-[45%] lg:w-[31%] bg-white rounded-[24px] sm:rounded-[28px] p-5 sm:p-7 border border-white/20 shadow-[0_14px_35px_rgba(0,0,0,0.2)] flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300"
             >
               <div>
                 {/* Review header */}

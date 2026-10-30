@@ -6,9 +6,9 @@ export default async function CTASection() {
   const t = await getTranslations('home.cta');
 
   return (
-    <section className="py-16 lg:py-24 bg-white">
+    <section className="py-12 sm:py-16 lg:py-24 bg-white">
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
-        <div className="relative rounded-[36px] overflow-hidden py-16 lg:py-20 px-6 sm:px-12 shadow-[0_25px_60px_rgba(139,102,232,0.28)]">
+        <div className="relative rounded-[28px] sm:rounded-[36px] overflow-hidden py-12 sm:py-16 lg:py-20 px-5 sm:px-12 shadow-[0_25px_60px_rgba(139,102,232,0.28)]">
           {/* Vibrant Violet (#8B66E8) to Deep Petrol (#213E4C) Gradient */}
           <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary-dark to-secondary" />
           
@@ -19,23 +19,23 @@ export default async function CTASection() {
           </div>
 
           <div className="relative z-10 text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-extrabold text-white mb-5 leading-tight tracking-tight">
+            <h2 className="text-[clamp(1.65rem,4vw+0.5rem,3rem)] font-serif font-extrabold text-white mb-4 sm:mb-5 leading-tight tracking-tight">
               {t('title')}
             </h2>
-            <p className="text-white/85 text-base sm:text-lg mb-9 max-w-2xl mx-auto">
+            <p className="text-white/85 text-sm sm:text-lg mb-7 sm:mb-9 max-w-2xl mx-auto">
               {t('subtitle')}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center">
               <Link 
                 href="/tours" 
-                className="bg-secondary text-white px-8 py-4 rounded-full font-extrabold text-base sm:text-lg hover:bg-white hover:text-secondary hover:shadow-xl transition-all inline-flex items-center gap-2.5 group shadow-lg"
+                className="w-full sm:w-auto justify-center bg-secondary text-white px-7 py-3.5 sm:px-8 sm:py-4 rounded-full font-extrabold text-sm sm:text-lg hover:bg-white hover:text-secondary hover:shadow-xl transition-all inline-flex items-center gap-2.5 group shadow-lg"
               >
                 {t('exploreTours')}
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 href="/contacto"
-                className="bg-white/15 backdrop-blur-md border-2 border-white/35 text-white px-8 py-4 rounded-full font-extrabold text-base sm:text-lg hover:bg-white hover:text-primary transition-all inline-flex items-center gap-2.5"
+                className="w-full sm:w-auto justify-center bg-white/15 backdrop-blur-md border-2 border-white/35 text-white px-7 py-3.5 sm:px-8 sm:py-4 rounded-full font-extrabold text-sm sm:text-lg hover:bg-white hover:text-primary transition-all inline-flex items-center gap-2.5"
               >
                 <Mail className="w-5 h-5" />
                 {t('contactUs')}

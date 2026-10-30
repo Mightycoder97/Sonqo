@@ -20,21 +20,21 @@ export default async function FeaturedTours() {
   const heroSubtitle = t('defaultSubtitle');
 
   return (
-    <section className="py-16 bg-background">
+    <section className="py-12 sm:py-16 bg-background">
       <div className="container mx-auto px-4 lg:px-8">
         
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 sm:mb-12">
           <div className="max-w-2xl">
-            <h2 className="text-3xl md:text-5xl font-serif font-extrabold text-secondary mb-4 tracking-tight">
+            <h2 className="text-[clamp(1.75rem,4vw+0.5rem,3rem)] font-serif font-extrabold text-secondary mb-3 sm:mb-4 tracking-tight leading-tight">
               {heroTitle}
             </h2>
-            <p className="text-text-light text-lg">
+            <p className="text-text-light text-sm sm:text-lg">
               {heroSubtitle}
             </p>
           </div>
           <Link 
             href="/tours" 
-            className="mt-6 md:mt-0 group flex items-center text-secondary font-extrabold hover:text-primary transition-colors"
+            className="mt-4 md:mt-0 group flex items-center text-secondary font-extrabold text-sm sm:text-base hover:text-primary transition-colors"
           >
             {t('viewAllTours')}
             <span className="ml-2 w-8 h-8 rounded-full border border-secondary flex items-center justify-center group-hover:bg-primary group-hover:border-primary group-hover:text-white transition-all">

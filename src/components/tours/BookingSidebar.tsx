@@ -294,7 +294,7 @@ export default function BookingSidebar({ tourId, tourName, tourSlug, priceAdult,
       )}
 
       <div 
-        className={`lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-white rounded-t-3xl shadow-[0_-8px_30px_rgb(0,0,0,0.15)] transition-transform duration-300 ease-in-out max-h-[80vh] overflow-y-auto ${
+        className={`lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-white rounded-t-3xl shadow-[0_-8px_30px_rgb(0,0,0,0.15)] transition-transform duration-300 ease-in-out max-h-[85dvh] overflow-y-auto ${
           isDrawerOpen ? 'translate-y-0' : 'translate-y-full'
         }`}
         style={{ paddingBottom: 'calc(env(safe-area-inset-bottom, 0px) + 88px)' }}

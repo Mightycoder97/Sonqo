@@ -383,21 +383,34 @@ export default function Navbar() {
 
       {/* ── Mobile Menu ──────────────────────────────────────────────────── */}
       <div
-        className={`lg:hidden fixed top-0 left-0 right-0 bottom-0 bg-primary-dark z-[60] flex flex-col transition-transform duration-300 ease-in-out ${
+        className={`lg:hidden fixed inset-0 h-dvh bg-secondary z-[60] flex flex-col transition-transform duration-300 ease-in-out ${
           isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
-        style={{ paddingTop: 'calc(env(safe-area-inset-top, 0px) + 80px)' }}
+        style={{ paddingTop: 'env(safe-area-inset-top, 0px)' }}
       >
-        <button
-          onClick={closeMobileMenu}
-          className="absolute top-4 right-4 p-3 text-white hover:bg-white/10 rounded-lg"
-          style={{ marginTop: 'env(safe-area-inset-top, 0px)' }}
-          aria-label={t('ariaLabels.closeMenu')}
-        >
-          <X className="w-6 h-6" />
-        </button>
+        {/* Mobile Menu Header Bar */}
+        <div className="flex items-center justify-between px-5 py-3.5 border-b border-white/10 shrink-0">
+          <Link href="/" onClick={closeMobileMenu} className="flex items-center">
+            <div className="relative w-36 h-10">
+              <Image
+                src={brand.logo.darkBgSrc}
+                alt={t('ariaLabels.logo')}
+                fill
+                sizes="144px"
+                className="object-contain"
+              />
+            </div>
+          </Link>
+          <button
+            onClick={closeMobileMenu}
+            className="p-2.5 text-white hover:bg-white/10 rounded-xl transition-colors"
+            aria-label={t('ariaLabels.closeMenu')}
+          >
+            <X className="w-6 h-6" />
+          </button>
+        </div>
 
-        <nav className="flex flex-col flex-grow overflow-y-auto px-6 py-4">
+        <nav className="flex flex-col flex-grow overflow-y-auto px-5 py-4">
           <div className="flex flex-col space-y-1">
 
             {/* Tours Accordion */}

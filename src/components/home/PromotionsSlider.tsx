@@ -73,13 +73,13 @@ export default function PromotionsSlider() {
   ];
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-cream overflow-hidden">
+    <section className="py-12 sm:py-20 lg:py-24 bg-cream overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8">
         
         {/* Header Section */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-7 sm:mb-10 gap-4">
           <div className="max-w-2xl">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-secondary leading-tight mb-3">
+            <h2 className="text-[clamp(1.75rem,4vw+0.5rem,3rem)] font-extrabold text-secondary leading-tight mb-2.5 sm:mb-3">
               {t('title')}
             </h2>
             <p className="text-text-light text-sm sm:text-base font-normal">
@@ -92,14 +92,14 @@ export default function PromotionsSlider() {
         <div className="relative">
           <div
             ref={scrollRef}
-            className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-none pb-4 -mx-4 px-4 sm:mx-0 sm:px-0"
+            className="flex gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 -mx-4 px-4 sm:mx-0 sm:px-0"
             style={{ scrollSnapType: 'x mandatory', WebkitOverflowScrolling: 'touch' }}
           >
             {promoCards.map((card, idx) => (
               <div
                 key={idx}
                 data-promo-card
-                className="relative w-[300px] sm:w-[380px] md:w-[460px] aspect-[1.65/1] shrink-0 rounded-3xl overflow-hidden shadow-xl shadow-primary/10 snap-start border-2 border-white group"
+                className="relative w-[84vw] max-w-[330px] sm:w-[380px] sm:max-w-none md:w-[460px] min-h-[225px] sm:aspect-[1.65/1] shrink-0 rounded-[24px] sm:rounded-3xl overflow-hidden shadow-xl shadow-primary/10 snap-start border-2 border-white group"
               >
                 <div className="absolute inset-0 overflow-hidden">
                   <Image
@@ -107,33 +107,33 @@ export default function PromotionsSlider() {
                     alt={t(card.titleKey)}
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
-                    sizes="(max-width: 640px) 300px, (max-width: 1024px) 380px, 460px"
+                    sizes="(max-width: 640px) 84vw, (max-width: 1024px) 380px, 460px"
                   />
                 </div>
                 
                 {/* Duotone Secondary/Primary Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-secondary/95 via-secondary/50 to-primary/30 opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-secondary/95 via-secondary/60 to-primary/30 opacity-100 transition-opacity duration-300" />
 
                 {/* Content */}
-                <div className="absolute inset-0 flex flex-col justify-between p-6 md:p-8 opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 flex flex-col justify-between p-5 sm:p-6 md:p-8 opacity-100 transition-opacity duration-300">
                   {/* Top tag badge */}
                   <div>
-                    <span className="inline-block bg-primary text-white font-extrabold text-[10px] sm:text-xs px-3.5 py-1.5 rounded-full uppercase tracking-wider shadow-md">
+                    <span className="inline-block bg-primary text-white font-extrabold text-[10px] sm:text-xs px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full uppercase tracking-wider shadow-md">
                       {t(card.tagKey)}
                     </span>
                   </div>
 
                   {/* Text details and CTA */}
                   <div>
-                    <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white tracking-tight leading-tight mb-2">
+                    <h3 className="text-lg sm:text-2xl md:text-3xl font-extrabold text-white tracking-tight leading-tight mb-1.5 sm:mb-2">
                       {t(card.titleKey)}
                     </h3>
-                    <p className="text-xs sm:text-sm text-white/85 font-normal mb-4 sm:mb-5 line-clamp-2 max-w-sm">
+                    <p className="text-xs sm:text-sm text-white/85 font-normal mb-3.5 sm:mb-5 line-clamp-2 max-w-sm">
                       {t(card.descKey)}
                     </p>
                     <Link
                       href={card.link}
-                      className="inline-block bg-white hover:bg-primary hover:text-white text-secondary px-6 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm transition-all duration-300 shadow-lg active:scale-95 text-center"
+                      className="inline-block bg-white hover:bg-primary hover:text-white text-secondary px-5 py-2 sm:px-6 sm:py-2.5 rounded-xl font-extrabold text-xs sm:text-sm transition-all duration-300 shadow-lg active:scale-95 text-center"
                     >
                       {t(card.ctaKey)}
                     </Link>
@@ -143,8 +143,8 @@ export default function PromotionsSlider() {
             ))}
           </div>
 
-          {/* Navigation Controls - Desktop & Mobile overlay */}
-          <div className="flex items-center justify-end gap-3 mt-8">
+          {/* Navigation Controls - Tablet & Desktop */}
+          <div className="hidden sm:flex items-center justify-end gap-3 mt-8">
             <button
               onClick={() => scroll('left')}
               disabled={!canScrollLeft}
