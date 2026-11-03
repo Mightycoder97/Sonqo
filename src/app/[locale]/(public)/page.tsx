@@ -1,5 +1,6 @@
 import Hero from '@/components/home/Hero';
 import FeaturedTours from '@/components/home/FeaturedTours';
+import DestinationsSection from '@/components/home/DestinationsSection';
 import Testimonials from '@/components/home/Testimonials';
 import FAQ from '@/components/home/FAQ';
 import CTASection from '@/components/home/CTASection';
@@ -85,6 +86,9 @@ export default async function Home() {
       
       {/* Tours Destacados */}
       <FeaturedTours />
+
+      {/* Destinos y Galería de Viajeros Reales */}
+      <DestinationsSection />
 
       {/* Promotions Slider / Ahorra en tu viaje */}
       <PromotionsSlider />

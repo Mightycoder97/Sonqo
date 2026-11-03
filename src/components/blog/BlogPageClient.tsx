@@ -85,10 +85,10 @@ export default function BlogPageClient({ tours }: BlogPageClientProps) {
     <div className="bg-gray-50 min-h-screen pb-20">
       
       {/* 1. Hero Banner */}
-      <div className="bg-primary text-white py-16 sm:py-24 pt-32 sm:pt-36">
-        <div className="container mx-auto px-4 lg:px-8 text-center max-w-4xl">
-          <h1 className="text-4xl sm:text-5xl font-serif mb-4">{t('title')}</h1>
-          <p className="text-lg text-white/80 font-light">
+      <div className="bg-secondary text-white py-14 sm:py-20 pt-28 sm:pt-32">
+        <div className="container mx-auto px-4 lg:px-8 text-center max-w-3xl">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-serif mb-3">{t('title')}</h1>
+          <p className="text-sm sm:text-base text-white/80 font-light">
             {t('subtitle')}
           </p>
         </div>

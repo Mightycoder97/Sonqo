@@ -1,5 +1,6 @@
+import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
-import { MapPin, Phone, Mail, Clock, ShieldCheck, HeartHandshake } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, BookOpen } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { getBrandConfig } from '@/lib/brand';
 
@@ -43,45 +44,61 @@ export default async function Footer() {
   return (
     <footer className="bg-footer-bg text-white border-t border-white/10">
       {/* Main Footer */}
-      <div className="container mx-auto px-4 lg:px-8 py-16">
+      <div className="container mx-auto px-4 lg:px-8 py-14">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 text-sm">
           
           {/* Column 1: Brand & Contacts */}
           <div className="sm:col-span-2 md:col-span-3 lg:col-span-2">
-            <h3 className="font-serif text-2xl text-primary-light mb-4 leading-tight">{t('brand.name')}</h3>
-            <p className="text-gray-300 text-xs sm:text-sm leading-relaxed mb-6 font-light">
+            <div className="relative w-24 h-8 mb-3">
+              <Image
+                src={brand.logo.darkBgSrc}
+                alt={brand.logo.alt}
+                fill
+                sizes="96px"
+                className="object-contain object-left"
+              />
+            </div>
+            <h3 className="font-serif text-lg text-primary-light mb-1 leading-tight">{brand.name}</h3>
+            <p className="text-gray-300 text-xs font-semibold mb-3">
+              {brand.legalName} — RUC: {rucValue}
+            </p>
+            <p className="text-gray-300 text-xs leading-relaxed mb-5 font-light">
               {t('brand.description')}
             </p>
             
             {/* Direct Contact info */}
-            <div className="space-y-3 mb-6">
-              <div className="flex items-center gap-2.5 text-gray-300">
-                <Phone className="w-4 h-4 text-primary-light shrink-0" />
-                <a href={`tel:+${brand.contact.cleanPhone}`} className="hover:text-primary-light transition-colors font-medium">{t('contact.phone')}</a>
+            <div className="space-y-2.5 mb-5 text-xs">
+              <div className="flex items-start gap-2.5 text-gray-300">
+                <MapPin className="w-3.5 h-3.5 text-primary-light shrink-0 mt-0.5" />
+                <span>{brand.contact.address}</span>
               </div>
               <div className="flex items-center gap-2.5 text-gray-300">
-                <Mail className="w-4 h-4 text-primary-light shrink-0" />
-                <a href={`mailto:${brand.contact.email}`} className="hover:text-primary-light transition-colors font-medium break-all">{t('contact.email')}</a>
+                <Phone className="w-3.5 h-3.5 text-primary-light shrink-0" />
+                <a href={`tel:+${brand.contact.cleanPhone}`} className="hover:text-primary-light transition-colors font-medium">{brand.contact.phone}</a>
               </div>
-              <div className="flex items-center gap-2.5 text-gray-400 text-xs">
-                <Clock className="w-4 h-4 text-primary-light shrink-0" />
+              <div className="flex items-center gap-2.5 text-gray-300">
+                <Mail className="w-3.5 h-3.5 text-primary-light shrink-0" />
+                <a href={`mailto:${brand.contact.email}`} className="hover:text-primary-light transition-colors font-medium break-all">{brand.contact.email}</a>
+              </div>
+              <div className="flex items-center gap-2.5 text-gray-400">
+                <Clock className="w-3.5 h-3.5 text-primary-light shrink-0" />
                 <span>{t('contact.hours')}</span>
               </div>
             </div>
 
             {/* Social media Links */}
-            <div className="flex gap-2.5">
-              <a href={brand.social.facebook} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary transition-colors text-gray-300 hover:text-white" aria-label={t('social.facebook')}>
-                <FacebookIcon className="w-4.5 h-4.5" />
+            <div className="flex gap-2">
+              <a href={brand.social.facebook} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary transition-colors text-gray-300 hover:text-white" aria-label={t('social.facebook')}>
+                <FacebookIcon className="w-4 h-4" />
               </a>
-              <a href={brand.social.instagram} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary transition-colors text-gray-300 hover:text-white" aria-label={t('social.instagram')}>
-                <InstagramIcon className="w-4.5 h-4.5" />
+              <a href={brand.social.instagram} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary transition-colors text-gray-300 hover:text-white" aria-label={t('social.instagram')}>
+                <InstagramIcon className="w-4 h-4" />
               </a>
-              <a href={brand.social.tiktok} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary transition-colors text-gray-300 hover:text-white" aria-label={t('social.tiktok')}>
-                <TiktokIcon className="w-4.5 h-4.5" />
+              <a href={brand.social.tiktok} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary transition-colors text-gray-300 hover:text-white" aria-label={t('social.tiktok')}>
+                <TiktokIcon className="w-4 h-4" />
               </a>
-              <a href={brand.social.tripadvisor} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary transition-colors text-gray-300 hover:text-white" aria-label="TripAdvisor">
-                <TripAdvisorIcon className="w-4.5 h-4.5" />
+              <a href={brand.social.tripadvisor} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary transition-colors text-gray-300 hover:text-white" aria-label="TripAdvisor">
+                <TripAdvisorIcon className="w-4 h-4" />
               </a>
             </div>
           </div>
@@ -89,7 +106,7 @@ export default async function Footer() {
           {/* Column 2: Servicios */}
           <div>
             <h4 className="font-bold text-xs uppercase tracking-wider text-white mb-4 border-b border-gray-800 pb-2">{t('servicios.title')}</h4>
-            <ul className="space-y-2.5 font-light text-gray-400 text-xs sm:text-sm">
+            <ul className="space-y-2 font-light text-gray-400 text-xs">
               <li><Link href="/tours" className="hover:text-primary transition-colors">{t('servicios.paquetes')}</Link></li>
               <li><Link href="/tours?q=Machu+Picchu" className="hover:text-primary transition-colors">{t('servicios.machuPicchu')}</Link></li>
               <li><Link href="/tours?q=Huacachina" className="hover:text-primary transition-colors">{t('servicios.huacachina')}</Link></li>
@@ -104,8 +121,9 @@ export default async function Footer() {
           {/* Column 3: Información Útil */}
           <div>
             <h4 className="font-bold text-xs uppercase tracking-wider text-white mb-4 border-b border-gray-800 pb-2">{t('util.title')}</h4>
-            <ul className="space-y-2.5 font-light text-gray-400 text-xs sm:text-sm">
+            <ul className="space-y-2 font-light text-gray-400 text-xs">
               <li><Link href="/tours" className="hover:text-primary transition-colors">{t('util.paquetes')}</Link></li>
+              <li><Link href="/experiencias" className="hover:text-primary transition-colors">Experiencias de Viajeros</Link></li>
               <li><Link href="/blog" className="hover:text-primary transition-colors">{t('util.blogMachuPicchu')}</Link></li>
               <li><Link href="/tours" className="hover:text-primary transition-colors">{t('util.destinosRecomendados')}</Link></li>
               <li><Link href="/contacto" className="hover:text-primary transition-colors">{t('util.planificarViaje')}</Link></li>
@@ -116,10 +134,11 @@ export default async function Footer() {
           {/* Column 4: Legales */}
           <div>
             <h4 className="font-bold text-xs uppercase tracking-wider text-white mb-4 border-b border-gray-800 pb-2">{t('legales.title')}</h4>
-            <ul className="space-y-2.5 font-light text-gray-400 text-xs sm:text-sm">
-              <li><Link href="/nosotros" className="hover:text-primary transition-colors">{t('legales.terminos')}</Link></li>
-              <li><Link href="/nosotros" className="hover:text-primary transition-colors">{t('legales.privacidad')}</Link></li>
-              <li><Link href="/nosotros" className="hover:text-primary transition-colors">{t('legales.cookies')}</Link></li>
+            <ul className="space-y-2 font-light text-gray-400 text-xs">
+              <li><Link href="/condiciones" className="hover:text-primary transition-colors">{t('legales.terminos')}</Link></li>
+              <li><Link href="/cambios-y-devoluciones" className="hover:text-primary transition-colors">{t('ayuda.cambios')}</Link></li>
+              <li><Link href="/politicas" className="hover:text-primary transition-colors">{t('legales.privacidad')}</Link></li>
+              <li><Link href="/politicas#cookies" className="hover:text-primary transition-colors">{t('legales.cookies')}</Link></li>
               <li><Link href="/nosotros" className="hover:text-primary transition-colors">{t('legales.compromiso')}</Link></li>
             </ul>
           </div>
@@ -127,17 +146,27 @@ export default async function Footer() {
           {/* Column 5: Centro de Ayuda */}
           <div>
             <h4 className="font-bold text-xs uppercase tracking-wider text-white mb-4 border-b border-gray-800 pb-2">{t('ayuda.title')}</h4>
-            <ul className="space-y-2.5 font-light text-gray-400 text-xs sm:text-sm mb-4">
-              <li><Link href="/contacto" className="hover:text-primary transition-colors">{t('ayuda.cambios')}</Link></li>
-              <li><Link href="/contacto" className="hover:text-primary transition-colors">{t('ayuda.faq')}</Link></li>
+            <ul className="space-y-2 font-light text-gray-400 text-xs mb-4">
+              <li><Link href="/cambios-y-devoluciones" className="hover:text-primary transition-colors">{t('ayuda.cambios')}</Link></li>
+              <li><Link href="/#faq" className="hover:text-primary transition-colors">{t('ayuda.faq')}</Link></li>
               <li><Link href="/contacto" className="hover:text-primary transition-colors">{t('ayuda.centroAyuda')}</Link></li>
             </ul>
             
-            {/* Libro de reclamaciones digital */}
+            {/* Libro de reclamaciones digital (INDECOPI) */}
             <div className="mt-4 pt-3 border-t border-gray-800">
-              <Link href="/contacto" className="group flex items-center gap-2 p-2.5 bg-white/5 border border-white/10 rounded-lg hover:border-primary transition-colors text-xs font-semibold">
-                <span className="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse" />
-                <span className="text-gray-300 group-hover:text-primary transition-colors">{t('ayuda.libroReclamaciones')}</span>
+              <Link
+                href="/libro-de-reclamaciones"
+                className="group flex items-center gap-2.5 p-2.5 bg-white/5 border border-white/15 rounded-xl hover:border-primary hover:bg-white/10 transition-colors text-xs font-semibold"
+              >
+                <BookOpen className="w-4 h-4 text-primary-light shrink-0" />
+                <div className="leading-tight">
+                  <span className="block text-white group-hover:text-primary-light transition-colors text-[11px]">
+                    {t('ayuda.libroReclamaciones')}
+                  </span>
+                  <span className="block text-[9px] text-gray-400 font-normal mt-0.5">
+                    Virtual — INDECOPI
+                  </span>
+                </div>
               </Link>
             </div>
           </div>
@@ -145,13 +174,14 @@ export default async function Footer() {
           {/* Column 6: Info Corporativa & Aliados */}
           <div>
             <h4 className="font-bold text-xs uppercase tracking-wider text-white mb-4 border-b border-gray-800 pb-2">{t('corporativo.title')}</h4>
-            <ul className="space-y-2.5 font-light text-gray-400 text-xs sm:text-sm mb-5">
+            <ul className="space-y-2 font-light text-gray-400 text-xs mb-5">
               <li><Link href="/nosotros" className="hover:text-primary transition-colors">{t('corporativo.ayudaSocial')}</Link></li>
+              <li className="text-gray-300 font-semibold">{brand.legalName}</li>
               <li className="text-gray-300 font-semibold">{t('corporativo.rucLabel', { ruc: rucValue })}</li>
             </ul>
 
             <h5 className="font-bold text-[10px] uppercase tracking-wider text-gray-400 mb-2">{t('corporativo.aliados')}</h5>
-            <div className="grid grid-cols-2 gap-1.5 text-[10px] text-gray-500 font-medium">
+            <div className="grid grid-cols-2 gap-1.5 text-[10px] text-gray-400 font-medium">
               <div className="bg-white/5 px-1.5 py-1 rounded border border-white/5 text-center">Peru Rail</div>
               <div className="bg-white/5 px-1.5 py-1 rounded border border-white/5 text-center">Inca Rail</div>
               <div className="bg-white/5 px-1.5 py-1 rounded border border-white/5 text-center">Latam</div>
@@ -164,20 +194,19 @@ export default async function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-white/5 bg-black/20">
-        <div className="container mx-auto px-4 lg:px-8 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs sm:text-sm">
-            <p className="text-gray-500 text-xs text-center md:text-left">
+        <div className="container mx-auto px-4 lg:px-8 py-5">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+            <p className="text-gray-400 text-xs text-center md:text-left">
               {t('bottom.copyright', { year: new Date().getFullYear() })}
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-3">
-              <span className="text-gray-500 text-xs font-semibold">{t('bottom.paymentMethods')}</span>
-              <div className="flex flex-wrap justify-center gap-1.5 text-[10px] font-bold text-gray-400">
+              <span className="text-gray-400 text-xs font-semibold">{t('bottom.paymentMethods')}</span>
+              <div className="flex flex-wrap justify-center gap-1.5 text-[10px] font-bold text-gray-300">
+                <span className="bg-white/5 rounded px-2 py-1 border border-white/10">CULQI</span>
                 <span className="bg-white/5 rounded px-2 py-1 border border-white/10">VISA</span>
                 <span className="bg-white/5 rounded px-2 py-1 border border-white/10">MASTERCARD</span>
+                <span className="bg-white/5 rounded px-2 py-1 border border-white/10">YAPE</span>
                 <span className="bg-white/5 rounded px-2 py-1 border border-white/10">PAYPAL</span>
-                <span className="bg-white/5 rounded px-2 py-1 border border-white/10">IZIPAY</span>
-                <span className="bg-white/5 rounded px-2 py-1 border border-white/10">WESTERN UNION</span>
-                <span className="bg-white/5 rounded px-2 py-1 border border-white/10">MONEYGRAM</span>
               </div>
             </div>
           </div>

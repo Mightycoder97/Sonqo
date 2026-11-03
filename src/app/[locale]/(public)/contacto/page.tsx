@@ -54,11 +54,11 @@ export default async function ContactoPage() {
       }} />
 
       {/* 1. Hero Banner */}
-      <div className="bg-primary text-white py-16 sm:py-24 pt-32 sm:pt-36">
-        <div className="container mx-auto px-4 lg:px-8 text-center max-w-4xl">
-          <h1 className="text-4xl sm:text-5xl font-serif mb-4">Contáctanos</h1>
-          <p className="text-lg text-white/80 font-light max-w-2xl mx-auto">
-            Estamos aquí para ayudarte a planificar tu próxima aventura inolvidable.
+      <div className="bg-secondary text-white py-14 sm:py-20 pt-28 sm:pt-32">
+        <div className="container mx-auto px-4 lg:px-8 text-center max-w-3xl">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-serif mb-3">Contáctanos</h1>
+          <p className="text-sm sm:text-base text-white/80 font-light max-w-xl mx-auto">
+            Estamos aquí para ayudarte a planificar tu próxima aventura inolvidable con Sonqo Perú Travel.
           </p>
         </div>
       </div>
@@ -136,7 +136,7 @@ export default async function ContactoPage() {
             <div className="bg-white p-5 rounded-2xl border border-gray-150 shadow-sm flex flex-col items-center">
               <Mail className="w-6 h-6 text-primary mb-2" />
               <h4 className="font-bold text-xs uppercase tracking-wider text-text-light mb-1">Consultas</h4>
-              <p className="text-text-main text-xs sm:text-sm font-semibold break-all">reservasmtaperu@gmail.com</p>
+              <p className="text-text-main text-xs sm:text-sm font-semibold break-all">reservas@sonqoperutravel.com</p>
             </div>
           </div>
         </div>

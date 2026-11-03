@@ -69,13 +69,13 @@ export default function TourCard({ tour }: { tour: TourProps }) {
         )}
 
         {/* Floating Price Pill on Image Bottom-Right */}
-        <div className="absolute bottom-3.5 right-3.5 z-20 bg-white/95 backdrop-blur-md px-4 py-2 rounded-2xl shadow-lg border border-primary/15 text-right">
+        <div className="absolute bottom-3 right-3 z-20 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-xl shadow-lg border border-primary/15 text-right">
           {hasPrice && (
-            <span className="text-[10px] uppercase text-primary font-extrabold tracking-wider block leading-none mb-0.5">
+            <span className="text-[9px] uppercase text-primary font-bold tracking-wider block leading-none mb-0.5">
               {t('from')}
             </span>
           )}
-          <div className={`font-extrabold leading-none ${hasPrice ? 'text-lg sm:text-xl text-secondary' : 'text-xs text-text-light italic'}`}>
+          <div className={`font-bold leading-none ${hasPrice ? 'text-sm sm:text-base text-secondary' : 'text-xs text-text-light italic'}`}>
             {formattedPrice}
           </div>
         </div>
@@ -118,7 +118,7 @@ export default function TourCard({ tour }: { tour: TourProps }) {
           )}
         </div>
 
-        <h3 className="text-lg sm:text-xl font-serif font-extrabold text-secondary mb-4 line-clamp-2 group-hover:text-primary transition-colors leading-snug">
+        <h3 className="text-sm sm:text-base font-serif font-bold text-secondary mb-3 line-clamp-2 group-hover:text-primary transition-colors leading-snug">
           <Link href={`/tours/${tour.slug}`}>
             {tour.title}
           </Link>

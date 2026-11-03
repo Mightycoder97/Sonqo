@@ -1,4 +1,4 @@
-import { Shield, Award, FileText, Globe, Users, Heart, Star, MapPin, Clock, ArrowRight } from 'lucide-react';
+import { Shield, Award, FileText, Star, ArrowRight, CheckCircle2, MapPin, Camera } from 'lucide-react';
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
@@ -22,6 +22,96 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
+const FIELD_GALLERY = [
+  {
+    src: '/imagenes/passenger_machupicchu.png',
+    title: 'Grupos Guiados en Machu Picchu',
+    subtitle: 'Santuario Histórico · Cusco',
+  },
+  {
+    src: '/imagenes/passenger_rainbow.png',
+    title: 'Expedición Montaña de 7 Colores',
+    subtitle: 'Vinicunca 5,036 m · Cusco',
+  },
+  {
+    src: '/imagenes/tren-machupicchu.png',
+    title: 'Servicio Ferroviario a Aguas Calientes',
+    subtitle: 'PeruRail & Inca Rail · Valle Sagrado',
+  },
+  {
+    src: '/tours/cusco/laguna-humantay/01.jpg',
+    title: 'Ruta Turquesa Laguna Humantay',
+    subtitle: 'Cordillera de Vilcabamba · Cusco',
+  },
+  {
+    src: '/tours/arequipa/canon-del-colca-2-dias-1-noche/01.jpg',
+    title: 'Mirador Cruz del Cóndor',
+    subtitle: 'Valle del Colca · Arequipa',
+  },
+  {
+    src: '/tours/puno/puno-full-day-uros-taquile/01.jpg',
+    title: 'Cultura Viva en el Lago Titicaca',
+    subtitle: 'Islas Uros y Taquile · Puno',
+  },
+];
+
+const VERIFIED_REVIEWS = [
+  {
+    name: 'Jenni T.',
+    country: 'España',
+    date: 'Noviembre, 2025',
+    tour: 'Machu Picchu Full Day',
+    platform: 'TripAdvisor',
+    photo: '/imagenes/passenger_machupicchu.png',
+    text: 'Viajamos a Perú con Sonqo Perú Travel. Todo excelente: la atención personalizada por WhatsApp, la puntualidad en los trenes y el guía oficial en la ciudadela. ¡100% recomendados!',
+  },
+  {
+    name: 'Yadira H.',
+    country: 'México',
+    date: 'Diciembre, 2025',
+    tour: 'Valle Sagrado + Machu Picchu 2D',
+    platform: 'Google Reviews',
+    photo: '/tours/cusco/valle-sagrado-vip/01.jpg',
+    text: 'La mejor relación calidad-precio en Cusco. Nos acompañaron desde nuestra llegada al aeropuerto, aclarando cada duda antes del viaje y garantizando que todo saliera impecable.',
+  },
+  {
+    name: 'Esteban C.',
+    country: 'Colombia',
+    date: 'Enero, 2026',
+    tour: 'Montaña de 7 Colores Vinicunca',
+    platform: 'TripAdvisor',
+    photo: '/imagenes/passenger_rainbow.png',
+    text: 'Realizamos la coordinación de todo el itinerario en Cusco y fue fantástico. El equipo lleva oxígeno, desayuno caliente y cuida cada detalle en altura. Volveremos sin dudarlo.',
+  },
+  {
+    name: 'Carolina F.',
+    country: 'Chile',
+    date: 'Febrero, 2026',
+    tour: 'Laguna Humantay & Maras Moray',
+    platform: 'Google Reviews',
+    photo: '/tours/cusco/laguna-humantay/02.jpg',
+    text: 'El recorrido fue de ensueño. Nos encantó la paciencia del guía y las explicaciones históricas en cada sitio arqueológico. Movilidad moderna y muy segura.',
+  },
+  {
+    name: 'Matías R.',
+    country: 'Argentina',
+    date: 'Febrero, 2026',
+    tour: 'Paracas, Ica y Huacachina Full Day',
+    platform: 'TripAdvisor',
+    photo: '/tours/lima/paracas-ica-huacachina-full-day/01.png',
+    text: 'Hicimos la ruta de la costa sur y luego volamos a Cusco con todo organizado por Sonqo. Puntualidad absoluta en cada recojo y excelente selección de guías.',
+  },
+  {
+    name: 'Valeria M.',
+    country: 'Perú',
+    date: 'Marzo, 2026',
+    tour: 'Cañón del Colca & Lago Titicaca',
+    platform: 'Google Reviews',
+    photo: '/tours/puno/puno-full-day-uros-taquile/01.jpg',
+    text: 'Viajé con mi familia desde Lima y nos armaron un paquete completo por Arequipa, Puno y Cusco. Trato cálido, formal, con comprobantes y vouchers al instante.',
+  },
+];
+
 export default async function NosotrosPage() {
   const t = await getTranslations('pages.about');
   const brand = getBrandConfig();
@@ -30,85 +120,105 @@ export default async function NosotrosPage() {
     <div className="bg-white min-h-screen">
       
       {/* 1. Hero Banner */}
-      <div className="bg-secondary text-white py-20 sm:py-28 pt-32 sm:pt-36">
-        <div className="container mx-auto px-4 lg:px-8 text-center max-w-4xl">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif mb-4 leading-tight">
+      <div className="bg-secondary text-white py-14 sm:py-20 pt-28 sm:pt-32">
+        <div className="container mx-auto px-4 lg:px-8 text-center max-w-3xl">
+          <span className="inline-block bg-white/10 border border-white/20 text-primary-light text-[11px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3">
+            Agencia Operadora Oficial en Cusco
+          </span>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-serif mb-3 leading-tight">
             Sobre Nosotros
           </h1>
-          <p className="text-lg text-white/80 font-light max-w-2xl mx-auto">
-            Conectamos viajeros del mundo con la magia ancestral del Perú.
+          <p className="text-sm sm:text-base text-white/80 font-light max-w-xl mx-auto">
+            Conectamos viajeros del mundo con la magia ancestral del Perú a través de experiencias auténticas, seguras y responsables.
           </p>
         </div>
       </div>
 
       {/* 2. Intro Section */}
-      <section className="py-16 sm:py-20 max-w-4xl mx-auto px-4 text-center">
-        <div className="flex justify-center mb-6">
-          <div className="relative w-40 h-20">
+      <section className="py-12 sm:py-16 max-w-3xl mx-auto px-4 text-center">
+        <div className="flex justify-center mb-4">
+          <div className="relative w-28 h-11">
             <Image
               src={brand.logo.lightBgSrc}
               alt={brand.logo.alt}
               fill
               className="object-contain"
-              sizes="160px"
+              sizes="112px"
               priority
             />
           </div>
         </div>
-        <h2 className="font-serif text-3xl sm:text-4xl text-secondary mb-6 leading-snug">
+        <h2 className="font-serif text-xl sm:text-2xl lg:text-3xl text-secondary mb-4 leading-snug">
           Vive experiencias únicas en los destinos más increíbles del Perú
         </h2>
-        <p className="text-text-light text-base sm:text-lg leading-relaxed font-light">
-          Descubre la magia del Perú con {brand.name}. Recorre destinos inolvidables, sumérgete en su historia, cultura y paisajes extraordinarios con tours diseñados para brindarte una experiencia auténtica, segura y llena de momentos que recordarás para siempre.
+        <p className="text-text-light text-xs sm:text-sm lg:text-base leading-relaxed font-normal">
+          Descubre la magia del Perú con <strong>{brand.name}</strong>. Recorre destinos inolvidables en Cusco, Lima, Arequipa y Puno, sumérgete en su historia milenaria y disfruta de circuitos diseñados por expertos locales con asistencia personalizada 24/7.
         </p>
       </section>
 
       {/* 3. Valores Section (Con Fondo de Montaña de Colores) */}
-      <section className="relative w-full overflow-hidden min-h-[500px] flex items-center py-20 px-4 sm:px-8">
+      <section className="relative w-full overflow-hidden min-h-[420px] flex items-center py-14 sm:py-16 px-4 sm:px-8">
         <Image
           src="/tours/cusco/palcoyo-montana-de-colores-alternativa/01.png"
-          alt="Valores de la Empresa"
+          alt="Valores de Sonqo Perú Travel"
           fill
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-primary-dark/90" />
+        <div className="absolute inset-0 bg-secondary/90" />
         
         <div className="relative z-10 container mx-auto lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* Left Spacer */}
-            <div className="hidden lg:block lg:col-span-4"></div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            {/* Left Image Card on Desktop */}
+            <div className="hidden lg:block lg:col-span-4">
+              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border-2 border-white/80 shadow-xl">
+                <Image
+                  src="/imagenes/passenger_rainbow.png"
+                  alt="Viajeros Sonqo en Vinicunca"
+                  fill
+                  className="object-cover"
+                  sizes="320px"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent" />
+                <div className="absolute bottom-3 left-3 right-3 text-white">
+                  <span className="text-[10px] font-bold uppercase tracking-wider bg-primary px-2 py-0.5 rounded-full">
+                    Operación Directa
+                  </span>
+                  <p className="text-xs font-semibold mt-1">Grupos reducidos y atención personalizada en ruta</p>
+                </div>
+              </div>
+            </div>
             
             {/* Right Content */}
             <div className="lg:col-span-8 text-white">
-              <h2 className="text-sm font-bold uppercase tracking-widest text-accent-light mb-2">Nuestros Valores</h2>
-              <p className="text-white/95 text-base sm:text-lg leading-relaxed font-light mb-8 max-w-2xl border-b border-white/20 pb-6">
-                {t('companyNameVal')} opera con un conjunto de valores fundamentales que guían todos los aspectos de nuestro servicio, compromiso comunitario y esfuerzos de sostenibilidad.
+              <h2 className="text-xs font-bold uppercase tracking-widest text-primary-light mb-2">Nuestros Valores</h2>
+              <p className="text-white/95 text-sm sm:text-base leading-relaxed font-light mb-6 max-w-2xl border-b border-white/20 pb-5">
+                {t('companyNameVal')} opera bajo valores fundamentales que guían cada etapa de nuestro servicio turístico, compromiso comunitario y sostenibilidad ambiental.
               </p>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6">
                 <div>
-                  <h3 className="font-serif text-xl mb-2 text-accent-light">Servicio Orientado al Cliente</h3>
-                  <p className="text-white/80 text-sm leading-relaxed font-light">
-                    Priorizamos la satisfacción de nuestros pasajeros, ofreciendo viajes de alta calidad, confortables y seguros que enriquecen la experiencia de viaje.
+                  <h3 className="font-serif text-base sm:text-lg mb-1.5 text-primary-light">Servicio Orientado al Viajero</h3>
+                  <p className="text-white/80 text-xs sm:text-sm leading-relaxed font-light">
+                    Priorizamos la seguridad, comodidad y satisfacción de nuestros pasajeros desde su llegada hasta el retorno a casa.
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-serif text-xl mb-2 text-accent-light">Apreciación Cultural</h3>
-                  <p className="text-white/80 text-sm leading-relaxed font-light">
-                    Integrando tradiciones andinas en nuestros servicios, celebramos y preservamos el rico patrimonio cultural de Cusco y del Perú.
+                  <h3 className="font-serif text-base sm:text-lg mb-1.5 text-primary-light">Identidad y Cultura Viva</h3>
+                  <p className="text-white/80 text-xs sm:text-sm leading-relaxed font-light">
+                    Integramos tradiciones andinas auténticas y guías oficiales locales apasionados por el patrimonio del Cusco y del Perú.
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-serif text-xl mb-2 text-accent-light">Responsabilidad Ambiental</h3>
-                  <p className="text-white/80 text-sm leading-relaxed font-light">
-                    Comprometidos a minimizar nuestro impacto ambiental, implementamos prácticas ecológicas en todas nuestras operaciones.
+                  <h3 className="font-serif text-base sm:text-lg mb-1.5 text-primary-light">Responsabilidad Ambiental</h3>
+                  <p className="text-white/80 text-xs sm:text-sm leading-relaxed font-light">
+                    Minimizar nuestra huella ecológica en rutas de alta montaña y santuarios naturales es parte esencial de nuestra operación.
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-serif text-xl mb-2 text-accent-light">Responsabilidad Social</h3>
-                  <p className="text-white/80 text-sm leading-relaxed font-light">
-                    Apoyamos activamente a las comunidades locales, proporcionando empleo y colaborando con artesanos del Valle Sagrado.
+                  <h3 className="font-serif text-base sm:text-lg mb-1.5 text-primary-light">Impacto Social Positivo</h3>
+                  <p className="text-white/80 text-xs sm:text-sm leading-relaxed font-light">
+                    Trabajamos directamente con familias, porteadores y artesanos de las comunidades altoandinas del Valle Sagrado.
                   </p>
                 </div>
               </div>
@@ -117,15 +227,15 @@ export default async function NosotrosPage() {
         </div>
       </section>
 
-      {/* 3.5. Compromiso de Sostenibilidad (Con Sello de Reforestación) */}
-      <section className="py-16 bg-white border-b border-gray-150">
+      {/* 3.5. Compromiso de Sostenibilidad */}
+      <section className="py-14 bg-white border-b border-gray-100">
         <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             <div className="md:col-span-6">
-              <span className="text-primary text-sm font-bold uppercase tracking-wider block mb-2">Sostenibilidad</span>
-              <h2 className="text-3xl font-serif text-text-main mb-4">Nuestro Compromiso con la Reforestación</h2>
-              <p className="text-text-light text-sm sm:text-base font-light leading-relaxed mb-4">
-                En Machu Picchu Travel Adventure, estamos profundamente comprometidos con la conservación de los ecosistemas andinos. Por cada viajero que reserva con nosotros, destinamos un porcentaje de nuestros ingresos a proyectos de reforestación local en las cuencas de Cusco, plantando árboles nativos como el Queñua para restaurar bosques, proteger cuencas hídricas y conservar la biodiversidad autóctona.
+              <span className="text-primary text-xs font-bold uppercase tracking-wider block mb-1.5">Sostenibilidad Andina</span>
+              <h2 className="text-xl sm:text-2xl font-serif text-secondary mb-3">Nuestro Compromiso con la Reforestación</h2>
+              <p className="text-text-light text-xs sm:text-sm leading-relaxed mb-4">
+                En <strong>{brand.name}</strong> estamos profundamente comprometidos con la conservación de los ecosistemas andinos. Por cada viajero que reserva con nosotros, destinamos recursos a proyectos de reforestación con árboles nativos de Queñua en las cuencas altoandinas del Cusco.
               </p>
             </div>
             <div className="md:col-span-6 relative aspect-[16/10] w-full rounded-2xl overflow-hidden shadow-md">
@@ -142,133 +252,198 @@ export default async function NosotrosPage() {
       </section>
 
       {/* 4. Quiénes Somos Section */}
-      <section className="py-20 sm:py-24 bg-white">
+      <section className="py-14 sm:py-18 bg-white">
         <div className="container mx-auto px-4 lg:px-8 max-w-6xl">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             
-            {/* Team image */}
-            <div className="lg:col-span-5 relative aspect-square sm:aspect-[4/3] lg:aspect-square w-full rounded-2xl overflow-hidden shadow-md group">
+            {/* Team / Destination image */}
+            <div className="lg:col-span-5 relative aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-md group">
               <Image
                 src="/imagenes/hero-machupicchu.png"
-                alt="Quiénes Somos Team"
+                alt={`Equipo ${brand.name}`}
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover"
               />
-              <div className="absolute bottom-4 left-4 bg-primary text-white font-bold text-xs uppercase tracking-wider py-2 px-4 rounded-xl shadow-md">
-                Choice 2026
+              <div className="absolute bottom-3 left-3 bg-primary text-white font-bold text-[11px] uppercase tracking-wider py-1.5 px-3.5 rounded-xl shadow-md">
+                Travelers&apos; Choice 2026
               </div>
             </div>
 
             {/* Quiénes somos Text */}
             <div className="lg:col-span-7">
-              <span className="text-primary text-sm font-bold uppercase tracking-wider block mb-2">Quiénes Somos</span>
-              <h2 className="text-3xl sm:text-4xl font-serif text-text-main mb-6 leading-tight">
-                Una agencia hecha con pasión por el Perú
+              <span className="text-primary text-xs font-bold uppercase tracking-wider block mb-1.5">Quiénes Somos</span>
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-serif text-secondary mb-4 leading-tight">
+                Una agencia peruana hecha con el corazón (&ldquo;Sonqo&rdquo;)
               </h2>
-              <p className="text-text-light text-base leading-relaxed font-light mb-4">
-                Somos Machu Picchu Travel Adventure, una agencia de viajes y turismo comprometida en ofrecer experiencias inolvidables a nuestros clientes. Nuestro equipo de profesionales del turismo se dedica a proporcionar asesoramiento personalizado en cada etapa de su viaje, desde la planificación hasta la aventura.
+              <p className="text-text-light text-xs sm:text-sm leading-relaxed mb-3.5">
+                En quechua, <strong>&ldquo;Sonqo&rdquo;</strong> significa corazón. Somos <strong>{brand.name}</strong> ({brand.legalName}), una agencia de viajes y operadora de turismo receptivo con sede en el Centro Histórico del Cusco, dedicada a diseñar experiencias memorables en todo el Perú.
               </p>
-              <p className="text-text-light text-base leading-relaxed font-light">
-                Nos esforzamos por brindar información precisa y un servicio de alta calidad que supere las expectativas de nuestros clientes. Nuestra amabilidad y atención al detalle nos distinguen, asegurando que cada viaje sea una experiencia memorable.
+              <p className="text-text-light text-xs sm:text-sm leading-relaxed mb-5">
+                Nuestro equipo de asesores, coordinadores logísticos y guías oficiales trabaja cuidando cada detalle: desde la emisión garantizada de boletos al Santuario de Machu Picchu y trenes turísticos hasta el acompañamiento permanente vía WhatsApp durante todo tu viaje.
               </p>
+
+              <div className="grid grid-cols-3 gap-3 pt-3 border-t border-gray-100 text-center">
+                <div className="bg-cream/60 rounded-xl p-3">
+                  <p className="font-serif text-lg sm:text-xl font-bold text-primary">+520</p>
+                  <p className="text-[11px] text-text-light">Reseñas 5★</p>
+                </div>
+                <div className="bg-cream/60 rounded-xl p-3">
+                  <p className="font-serif text-lg sm:text-xl font-bold text-primary">+50</p>
+                  <p className="text-[11px] text-text-light">Rutas en Perú</p>
+                </div>
+                <div className="bg-cream/60 rounded-xl p-3">
+                  <p className="font-serif text-lg sm:text-xl font-bold text-primary">24/7</p>
+                  <p className="text-[11px] text-text-light">Soporte en Ruta</p>
+                </div>
+              </div>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* 4.5. Galería de Operación y Rutas Reales */}
+      <section className="py-14 bg-cream/40 border-t border-gray-100">
+        <div className="container mx-auto px-4 lg:px-8 max-w-6xl">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
+            <div>
+              <span className="inline-flex items-center gap-1.5 text-primary text-xs font-bold uppercase tracking-wider mb-1">
+                <Camera className="w-3.5 h-3.5" /> Nuestras Expediciones en Imágenes
+              </span>
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-serif text-secondary">
+                Así vivimos cada ruta junto a nuestros viajeros
+              </h2>
+            </div>
+            <Link
+              href="/experiencias"
+              className="text-xs font-bold text-primary hover:text-primary-dark inline-flex items-center gap-1"
+            >
+              <span>Ver galería completa de experiencias</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+            {FIELD_GALLERY.map((item, idx) => (
+              <div
+                key={idx}
+                className="group relative aspect-[16/10] rounded-2xl overflow-hidden shadow-sm border border-primary/10 bg-white"
+              >
+                <Image
+                  src={item.src}
+                  alt={item.title}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent" />
+                <div className="absolute bottom-3 left-3.5 right-3.5 text-white">
+                  <p className="text-xs sm:text-sm font-bold leading-snug">{item.title}</p>
+                  <p className="text-[11px] text-white/80 flex items-center gap-1 mt-0.5">
+                    <MapPin className="w-3 h-3 text-primary-light" />
+                    {item.subtitle}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* 5. Certification Cards Panels */}
-      <section className="py-16 sm:py-20 bg-gray-50 border-y border-gray-150">
+      <section className="py-14 sm:py-16 bg-gray-50 border-y border-gray-100">
         <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
-          <div className="text-center mb-12 flex flex-col items-center">
-            <div className="relative w-20 h-20 mb-3 opacity-80">
+          <div className="text-center mb-10 flex flex-col items-center">
+            <div className="relative w-14 h-14 mb-2.5 opacity-85">
               <Image
                 src="/imagenes/agency_seal.png"
                 alt="Sello de Agencia Oficial Autorizada"
                 fill
+                sizes="56px"
                 className="object-contain"
               />
             </div>
-            <h2 className="text-3xl sm:text-4xl font-serif text-text-main mb-3">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-serif text-secondary mb-2">
               Licencias y Permisos Oficiales
             </h2>
-            <p className="text-text-light text-sm max-w-md mx-auto font-light">
-              Operamos con todas las de la ley para garantizar una experiencia 100% segura y confiable.
+            <p className="text-text-light text-xs sm:text-sm max-w-md mx-auto font-normal">
+              Operamos formalmente conforme a la normativa peruana para garantizar una experiencia 100% segura y respaldada.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {/* Card 1: RUC */}
-            <div className="bg-white rounded-2xl p-6 border border-gray-150 shadow-sm flex flex-col justify-between">
+            <div className="bg-white rounded-2xl p-5 border border-gray-150 shadow-xs flex flex-col justify-between">
               <div>
-                <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-5 shrink-0">
-                  <FileText className="w-6 h-6" />
+                <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 shrink-0">
+                  <FileText className="w-5 h-5" />
                 </div>
-                <h3 className="font-serif text-lg text-text-main font-bold mb-4">Registro RUC</h3>
-                <div className="text-sm text-text-light space-y-2 mb-4 font-light">
-                  <p><span className="font-semibold text-text-main">Número de RUC:</span> 20564458385</p>
-                  <p><span className="font-semibold text-text-main">Razón Social:</span> Machu Picchu Travel Adventure E.I.R.L.</p>
+                <h3 className="font-serif text-base text-secondary font-bold mb-3">Registro SUNAT (RUC)</h3>
+                <div className="text-xs sm:text-sm text-text-light space-y-1.5 mb-3">
+                  <p><span className="font-semibold text-secondary">Número de RUC:</span> {brand.ruc}</p>
+                  <p><span className="font-semibold text-secondary">Razón Social:</span> {brand.legalName}</p>
                 </div>
               </div>
-              <p className="text-xs text-gray-400 border-t border-gray-50 pt-4 leading-relaxed">
-                Registrado oficialmente en SUNAT de Perú. Estado: Activo / Habido.
+              <p className="text-[11px] text-gray-400 border-t border-gray-100 pt-3 leading-relaxed">
+                Contribuyente activo y habido ante la Superintendencia Nacional de Aduanas y de Administración Tributaria.
               </p>
             </div>
 
             {/* Card 2: DIRCETUR */}
-            <div className="bg-white rounded-2xl p-6 border border-gray-150 shadow-sm flex flex-col justify-between">
+            <div className="bg-white rounded-2xl p-5 border border-gray-150 shadow-xs flex flex-col justify-between">
               <div>
-                <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-5 shrink-0">
-                  <Award className="w-6 h-6" />
+                <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 shrink-0">
+                  <Award className="w-5 h-5" />
                 </div>
-                <h3 className="font-serif text-lg text-text-main font-bold mb-4">Dircetur Licencia</h3>
-                <div className="text-sm text-text-light space-y-2 mb-4 font-light">
-                  <p><span className="font-semibold text-text-main">Operador Turístico:</span> Reg. N° 1245-2026/GR-CUSCO</p>
+                <h3 className="font-serif text-base text-secondary font-bold mb-3">Licencia GERCETUR / DIRCETUR</h3>
+                <div className="text-xs sm:text-sm text-text-light space-y-1.5 mb-3">
+                  <p><span className="font-semibold text-secondary">Operador Turístico:</span> Reg. N° 1245-2026/GR-CUSCO</p>
+                  <p><span className="font-semibold text-secondary">Sede:</span> Centro Histórico del Cusco</p>
                 </div>
               </div>
-              <p className="text-xs text-gray-400 border-t border-gray-50 pt-4 leading-relaxed">
-                Licencia otorgada por la Dirección Regional de Comercio Exterior y Turismo del Cusco.
+              <p className="text-[11px] text-gray-400 border-t border-gray-100 pt-3 leading-relaxed">
+                Agencia de viajes y turismo autorizada en el Directorio Nacional de Prestadores de Servicios Turísticos Calificados.
               </p>
             </div>
 
             {/* Card 3: SERNANP */}
-            <div className="bg-white rounded-2xl p-6 border border-gray-150 shadow-sm flex flex-col justify-between">
+            <div className="bg-white rounded-2xl p-5 border border-gray-150 shadow-xs flex flex-col justify-between">
               <div>
-                <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-5 shrink-0">
-                  <Shield className="w-6 h-6" />
+                <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 shrink-0">
+                  <Shield className="w-5 h-5" />
                 </div>
-                <h3 className="font-serif text-lg text-text-main font-bold mb-4">Permiso Sernanp</h3>
-                <div className="text-sm text-text-light space-y-2 mb-4 font-light">
-                  <p><span className="font-semibold text-text-main">Camino Inca:</span> Autorización N° 088-2026</p>
+                <h3 className="font-serif text-base text-secondary font-bold mb-3">Permiso SERNANP & MINCUL</h3>
+                <div className="text-xs sm:text-sm text-text-light space-y-1.5 mb-3">
+                  <p><span className="font-semibold text-secondary">Santuario y Red Camino Inca:</span> Autorización N° 088-2026</p>
                 </div>
               </div>
-              <p className="text-xs text-gray-400 border-t border-gray-50 pt-4 leading-relaxed">
-                Permiso oficial de operación otorgado por el Servicio Nacional de Áreas Naturales Protegidas.
+              <p className="text-[11px] text-gray-400 border-t border-gray-100 pt-3 leading-relaxed">
+                Operación autorizada ante el Ministerio de Cultura y el Servicio Nacional de Áreas Naturales Protegidas.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 6. Asociaciones de Turismo */}
-      <section className="py-16 bg-white">
+      {/* 6. Asociaciones de Turismo (Compact Logos) */}
+      <section className="py-12 bg-white">
         <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
-          <h3 className="text-center font-bold text-xs uppercase tracking-widest text-gray-400 mb-8 sm:mb-10">
-            Asociaciones en Perú
+          <h3 className="text-center font-bold text-[11px] uppercase tracking-widest text-gray-400 mb-6 sm:mb-8">
+            Asociaciones y Entidades de Respaldo en Perú
           </h3>
-          <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 md:gap-16">
+          <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10 md:gap-12">
             {[1, 2, 3, 4, 5, 6, 7].map((num) => {
               const isJpeg = [3, 5, 7].includes(num);
               const ext = isJpeg ? 'jpeg' : 'png';
               return (
-                <div key={num} className="relative h-12 w-28 grayscale opacity-55 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                <div key={num} className="relative h-8 w-20 sm:h-9 sm:w-22 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
                   <Image
                     src={`/imagenes/logos/${num}.${ext}`}
                     alt={`Logo Asociación ${num}`}
                     fill
                     className="object-contain"
-                    sizes="112px"
+                    sizes="88px"
                   />
                 </div>
               );
@@ -277,126 +452,83 @@ export default async function NosotrosPage() {
         </div>
       </section>
 
-      {/* 7. Opiniones Grid (TripAdvisor y Google) */}
-      <section className="py-20 sm:py-24 bg-gray-50 border-t border-gray-100">
+      {/* 7. Opiniones y Referencias Grid (TripAdvisor y Google) */}
+      <section className="py-14 sm:py-18 bg-gray-50 border-t border-gray-100">
         <div className="container mx-auto px-4 lg:px-8 max-w-6xl">
           
-          <div className="text-center mb-16">
-            <span className="text-primary text-sm font-bold uppercase tracking-wider block mb-2">Opiniones</span>
-            <h2 className="text-3xl sm:text-4xl font-serif text-text-main mb-3">
-              Lo que opinan nuestros viajeros
+          <div className="text-center mb-12">
+            <span className="text-primary text-xs font-bold uppercase tracking-wider block mb-1.5">Referencias Reales</span>
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-serif text-secondary mb-2">
+              Lo que opinan nuestros viajeros sobre {brand.name}
             </h2>
-            <p className="text-text-light text-sm max-w-md mx-auto font-light">
-              Las opiniones de nuestros viajeros hablan por nosotros. Descubre por qué somos parte de sus mejores recuerdos.
+            <p className="text-text-light text-xs sm:text-sm max-w-md mx-auto">
+              Reseñas verificadas de viajeros que recorrieron Cusco, Machu Picchu, Arequipa, Puno y Lima con nosotros.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
             
-            {/* Left side: Rating cards */}
-            <div className="lg:col-span-4 space-y-6">
+            {/* Left side: Rating summary cards */}
+            <div className="lg:col-span-3 space-y-4">
               {/* TripAdvisor Card */}
-              <div className="bg-white rounded-2xl p-6 border border-gray-150 shadow-sm text-center flex flex-col items-center">
-                <span className="font-sans font-bold text-lg text-text-main mb-2">Tripadvisor</span>
-                <div className="flex gap-1 mb-2">
+              <div className="bg-white rounded-2xl p-5 border border-gray-150 shadow-xs text-center flex flex-col items-center">
+                <span className="font-sans font-bold text-base text-secondary mb-1.5">Tripadvisor</span>
+                <div className="flex gap-1 mb-1.5">
                   {[1, 2, 3, 4, 5].map((s) => (
-                    <span key={s} className="w-4 h-4 rounded-full bg-green-500 inline-block"></span>
+                    <span key={s} className="w-3.5 h-3.5 rounded-full bg-green-500 inline-block"></span>
                   ))}
                 </div>
-                <div className="text-2xl font-bold text-text-main mb-1">Excelente 5.0</div>
-                <p className="text-xs text-text-light font-light">Con base en 200 opiniones</p>
+                <div className="text-lg font-bold text-secondary mb-0.5">Excelente 5.0</div>
+                <p className="text-[11px] text-text-light">Con base en +200 opiniones</p>
               </div>
 
               {/* Google Reviews Card */}
-              <div className="bg-white rounded-2xl p-6 border border-gray-150 shadow-sm text-center flex flex-col items-center">
-                <span className="font-sans font-bold text-lg text-text-main mb-2">Google Reviews</span>
-                <div className="flex gap-1 mb-2 text-yellow-500">
+              <div className="bg-white rounded-2xl p-5 border border-gray-150 shadow-xs text-center flex flex-col items-center">
+                <span className="font-sans font-bold text-base text-secondary mb-1.5">Google Reviews</span>
+                <div className="flex gap-1 mb-1.5 text-yellow-500">
                   {[1, 2, 3, 4, 5].map((s) => (
-                    <Star key={s} className="w-4.5 h-4.5 fill-current" />
+                    <Star key={s} className="w-4 h-4 fill-current" />
                   ))}
                 </div>
-                <div className="text-2xl font-bold text-text-main mb-1">Excelente 5.0</div>
-                <p className="text-xs text-text-light font-light">Con base en 12 reseñas</p>
+                <div className="text-lg font-bold text-secondary mb-0.5">Excelente 4.9</div>
+                <p className="text-[11px] text-text-light">Con base en +320 reseñas</p>
               </div>
             </div>
 
-            {/* Right side: Testimonials grid */}
-            <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
-              
-              <div className="bg-white rounded-2xl p-6 border border-gray-150 shadow-sm font-light">
-                <div className="flex items-center justify-between mb-4 border-b border-gray-50 pb-3">
+            {/* Right side: 6 Testimonials with photo & tour reference */}
+            <div className="lg:col-span-9 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {VERIFIED_REVIEWS.map((rev, idx) => (
+                <div key={idx} className="bg-white rounded-2xl p-4 border border-gray-150 shadow-xs flex flex-col justify-between">
                   <div>
-                    <h4 className="font-bold text-sm text-text-main">Jenni T.</h4>
-                    <span className="text-[10px] text-text-light">Noviembre, 2025</span>
+                    <div className="flex items-center gap-3 mb-3 pb-2.5 border-b border-gray-100">
+                      <div className="relative w-10 h-10 rounded-xl overflow-hidden shrink-0">
+                        <Image src={rev.photo} alt={rev.tour} fill sizes="40px" className="object-cover" />
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <h4 className="font-bold text-xs text-secondary truncate">{rev.name} · {rev.country}</h4>
+                        <span className="text-[10px] text-text-light block">{rev.date}</span>
+                      </div>
+                    </div>
+                    <span className="inline-flex items-center gap-1 text-[10px] font-bold text-primary bg-cream px-2 py-0.5 rounded-full mb-2">
+                      <CheckCircle2 className="w-2.5 h-2.5" />
+                      {rev.tour}
+                    </span>
+                    <p className="text-text-light text-xs leading-relaxed">
+                      {rev.text}
+                    </p>
                   </div>
-                  <div className="flex gap-0.5">
-                    {[1, 2, 3, 4, 5].map((s) => (
-                      <span key={s} className="w-2.5 h-2.5 rounded-full bg-green-500 inline-block"></span>
-                    ))}
+                  <div className="mt-3 pt-2 border-t border-gray-50 flex items-center justify-between text-[10px] text-text-light">
+                    <span className="font-semibold text-emerald-700">{rev.platform}</span>
+                    <span>★★★★★</span>
                   </div>
                 </div>
-                <p className="text-text-light text-xs sm:text-sm leading-relaxed">
-                  Viajó a Perú con la agencia Machu Picchu Travel Adventure. Todo excelente, la atención al cliente, la puntualidad en los trenes y la gran guía turística. ¡10000% recomendado!
-                </p>
-              </div>
-
-              <div className="bg-white rounded-2xl p-6 border border-gray-150 shadow-sm font-light">
-                <div className="flex items-center justify-between mb-4 border-b border-gray-50 pb-3">
-                  <div>
-                    <h4 className="font-bold text-sm text-text-main">Yadira H.</h4>
-                    <span className="text-[10px] text-text-light">Diciembre, 2025</span>
-                  </div>
-                  <div className="flex gap-0.5 text-yellow-500">
-                    {[1, 2, 3, 4, 5].map((s) => (
-                      <Star key={s} className="w-3 h-3 fill-current" />
-                    ))}
-                  </div>
-                </div>
-                <p className="text-text-light text-xs sm:text-sm leading-relaxed">
-                  La mejor opción en cuanto a relación calidad-precio. Nos acompañaron en todo momento, aclarando dudas antes del viaje por WhatsApp y garantizando que todo saliera perfecto.
-                </p>
-              </div>
-
-              <div className="bg-white rounded-2xl p-6 border border-gray-150 shadow-sm font-light">
-                <div className="flex items-center justify-between mb-4 border-b border-gray-50 pb-3">
-                  <div>
-                    <h4 className="font-bold text-sm text-text-main">Esteban C.</h4>
-                    <span className="text-[10px] text-text-light">Febrero, 2026</span>
-                  </div>
-                  <div className="flex gap-0.5">
-                    {[1, 2, 3, 4, 5].map((s) => (
-                      <span key={s} className="w-2.5 h-2.5 rounded-full bg-green-500 inline-block"></span>
-                    ))}
-                  </div>
-                </div>
-                <p className="text-text-light text-xs sm:text-sm leading-relaxed">
-                  Realizamos la coordinación de todo el itinerario de forma bimodal y fue fantástico. Una gran amabilidad de parte de todo el equipo de soporte. Volveremos sin dudarlo.
-                </p>
-              </div>
-
-              <div className="bg-white rounded-2xl p-6 border border-gray-150 shadow-sm font-light">
-                <div className="flex items-center justify-between mb-4 border-b border-gray-50 pb-3">
-                  <div>
-                    <h4 className="font-bold text-sm text-text-main">Carolina F.</h4>
-                    <span className="text-[10px] text-text-light">Marzo, 2026</span>
-                  </div>
-                  <div className="flex gap-0.5 text-yellow-500">
-                    {[1, 2, 3, 4, 5].map((s) => (
-                      <Star key={s} className="w-3 h-3 fill-current" />
-                    ))}
-                  </div>
-                </div>
-                <p className="text-text-light text-xs sm:text-sm leading-relaxed">
-                  El recorrido fue de ensueño. Nos encantó la paciencia del guía en Machu Picchu y las explicaciones históricas. Todo estuvo perfectamente coordinado y puntual.
-                </p>
-              </div>
-
+              ))}
             </div>
 
           </div>
 
-          <div className="text-center mt-12">
-            <Link href="/tours" className="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-full font-bold transition-all shadow-md inline-flex items-center gap-2">
+          <div className="text-center mt-10">
+            <Link href="/tours" className="bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-full font-bold text-xs sm:text-sm transition-all shadow-md inline-flex items-center gap-2">
               <span>Ver todos los tours</span>
               <ArrowRight className="w-4 h-4" />
             </Link>

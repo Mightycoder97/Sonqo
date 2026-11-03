@@ -36,10 +36,10 @@ export default async function ToursPage({ searchParams }: ToursPageProps) {
     <div className="bg-gray-50 min-h-screen pb-20 pt-24 sm:pt-28">
       
       {/* Page Header */}
-      <div className="bg-primary-dark text-white py-10 sm:py-16 mb-8 sm:mb-12">
-        <div className="container mx-auto px-4 lg:px-8 text-center max-w-4xl">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif mb-3 sm:mb-4">{t('pageTitle')}</h1>
-          <p className="text-sm sm:text-lg text-white/80 font-light px-4">
+      <div className="bg-secondary text-white py-8 sm:py-12 mb-6 sm:mb-10">
+        <div className="container mx-auto px-4 lg:px-8 text-center max-w-3xl">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-serif mb-2.5">{t('pageTitle')}</h1>
+          <p className="text-xs sm:text-sm md:text-base text-white/80 font-light px-4">
             {t('pageSubtitle')}
           </p>
         </div>

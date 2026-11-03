@@ -164,7 +164,7 @@ export default function Navbar() {
     setMobileAccordion((prev) => (prev === key ? null : key));
   }, []);
 
-  const navLinkClass = `text-sm font-semibold hover:opacity-80 transition-opacity py-2 flex items-center gap-1`;
+  const navLinkClass = `text-xs xl:text-[13px] font-semibold hover:opacity-80 transition-opacity py-1.5 flex items-center gap-1`;
 
   return (
     <>
@@ -332,6 +332,9 @@ export default function Navbar() {
             <Link href="/nosotros" className={navLinkClass} aria-current={pathname === '/nosotros' ? 'page' : undefined}>
               {t('aboutUs')}
             </Link>
+            <Link href="/experiencias" className={navLinkClass} aria-current={pathname === '/experiencias' ? 'page' : undefined}>
+              Experiencias
+            </Link>
             <Link href="/blog" className={navLinkClass} aria-current={pathname === '/blog' ? 'page' : undefined}>
               {t('blog')}
             </Link>
@@ -353,7 +356,7 @@ export default function Navbar() {
             </Link>
             <Link
               href="/tours"
-              className={`px-5 py-2 rounded-full font-bold text-sm transition-colors ${ctaButtonClass}`}
+              className={`px-4 py-1.5 rounded-full font-bold text-xs transition-colors ${ctaButtonClass}`}
             >
               {t('planYourTrip')}
             </Link>
@@ -389,14 +392,14 @@ export default function Navbar() {
         style={{ paddingTop: 'env(safe-area-inset-top, 0px)' }}
       >
         {/* Mobile Menu Header Bar */}
-        <div className="flex items-center justify-between px-5 py-3.5 border-b border-white/10 shrink-0">
+        <div className="flex items-center justify-between px-5 py-3 border-b border-white/10 shrink-0">
           <Link href="/" onClick={closeMobileMenu} className="flex items-center">
-            <div className="relative w-36 h-10">
+            <div className="relative w-24 h-8">
               <Image
                 src={brand.logo.darkBgSrc}
                 alt={t('ariaLabels.logo')}
                 fill
-                sizes="144px"
+                sizes="96px"
                 className="object-contain"
               />
             </div>
@@ -417,34 +420,34 @@ export default function Navbar() {
             <div>
               <button
                 onClick={() => toggleMobileAccordion('tours')}
-                className="w-full flex items-center justify-between text-xl font-serif text-white py-4 border-b border-white/20 px-3"
+                className="w-full flex items-center justify-between text-base font-serif text-white py-3.5 border-b border-white/20 px-3"
                 aria-expanded={mobileAccordion === 'tours'}
               >
                 <span>{t('toursAndPackages')}</span>
-                <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${mobileAccordion === 'tours' ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileAccordion === 'tours' ? 'rotate-180' : ''}`} />
               </button>
               <div className={`grid transition-[grid-template-rows] duration-300 ${mobileAccordion === 'tours' ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
                 <div className="overflow-hidden">
-                  <div className="pl-4 py-3 space-y-1">
-                    <p className="text-white/40 text-xs uppercase tracking-widest font-bold px-3 mb-1">Por Destino</p>
+                  <div className="pl-4 py-2.5 space-y-1">
+                    <p className="text-white/40 text-[11px] uppercase tracking-widest font-bold px-3 mb-1">Por Destino</p>
                     {DESTINOS.map((d) => (
                       <Link
                         key={d.slug}
                         href={d.href}
                         onClick={closeMobileMenu}
-                        className="flex items-center gap-3 text-white/90 hover:text-white py-2.5 px-3 rounded-lg active:bg-white/10 transition-colors"
+                        className="flex items-center gap-3 text-white/90 hover:text-white py-2 px-3 rounded-lg active:bg-white/10 transition-colors"
                       >
                         <d.icon className="w-4 h-4 shrink-0 text-white/60" />
-                        <span className="text-base">{d.label}</span>
+                        <span className="text-sm">{d.label}</span>
                       </Link>
                     ))}
                     <Link
                       href="/tours"
                       onClick={closeMobileMenu}
-                      className="flex items-center gap-3 text-primary-light font-semibold py-2.5 px-3 rounded-lg mt-2"
+                      className="flex items-center gap-3 text-primary-light font-semibold py-2 px-3 rounded-lg mt-1"
                     >
                       <Compass className="w-4 h-4 shrink-0" />
-                      <span className="text-base">Ver todos los tours</span>
+                      <span className="text-sm">Ver todos los tours</span>
                     </Link>
                   </div>
                 </div>
@@ -455,25 +458,25 @@ export default function Navbar() {
             <div>
               <button
                 onClick={() => toggleMobileAccordion('destinos')}
-                className="w-full flex items-center justify-between text-xl font-serif text-white py-4 border-b border-white/20 px-3"
+                className="w-full flex items-center justify-between text-base font-serif text-white py-3.5 border-b border-white/20 px-3"
                 aria-expanded={mobileAccordion === 'destinos'}
               >
                 <span>{t('destinations')}</span>
-                <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${mobileAccordion === 'destinos' ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileAccordion === 'destinos' ? 'rotate-180' : ''}`} />
               </button>
               <div className={`grid transition-[grid-template-rows] duration-300 ${mobileAccordion === 'destinos' ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
                 <div className="overflow-hidden">
-                  <div className="pl-4 py-3 space-y-1">
+                  <div className="pl-4 py-2.5 space-y-1">
                     {DESTINOS.map((d) => (
                       <Link
                         key={d.slug}
                         href={d.href}
                         onClick={closeMobileMenu}
-                        className="flex items-center gap-3 text-white/90 hover:text-white py-2.5 px-3 rounded-lg active:bg-white/10 transition-colors"
+                        className="flex items-center gap-3 text-white/90 hover:text-white py-2 px-3 rounded-lg active:bg-white/10 transition-colors"
                       >
                         <d.icon className="w-4 h-4 shrink-0 text-white/60" />
                         <div>
-                          <p className="text-base font-semibold">{d.label}</p>
+                          <p className="text-sm font-semibold">{d.label}</p>
                           <p className="text-xs text-white/50">{d.desc}</p>
                         </div>
                       </Link>
@@ -483,13 +486,14 @@ export default function Navbar() {
               </div>
             </div>
 
-            <Link href="/nosotros" onClick={closeMobileMenu} className="text-xl font-serif text-white py-4 border-b border-white/20 px-3">{t('aboutUs')}</Link>
-            <Link href="/blog" onClick={closeMobileMenu} className="text-xl font-serif text-white py-4 border-b border-white/20 px-3">{t('blog')}</Link>
-            <Link href="/contacto" onClick={closeMobileMenu} className="text-xl font-serif text-white py-4 border-b border-white/20 px-3">{t('contactUs')}</Link>
+            <Link href="/nosotros" onClick={closeMobileMenu} className="text-base font-serif text-white py-3.5 border-b border-white/20 px-3">{t('aboutUs')}</Link>
+            <Link href="/experiencias" onClick={closeMobileMenu} className="text-base font-serif text-white py-3.5 border-b border-white/20 px-3">Experiencias</Link>
+            <Link href="/blog" onClick={closeMobileMenu} className="text-base font-serif text-white py-3.5 border-b border-white/20 px-3">{t('blog')}</Link>
+            <Link href="/contacto" onClick={closeMobileMenu} className="text-base font-serif text-white py-3.5 border-b border-white/20 px-3">{t('contactUs')}</Link>
           </div>
 
-          <div className="mt-8 flex flex-col space-y-4">
-            <Link href="/tours" onClick={closeMobileMenu} className="bg-primary text-white w-full py-4 rounded-full text-center font-bold text-lg shadow-lg">
+          <div className="mt-6 flex flex-col space-y-3">
+            <Link href="/tours" onClick={closeMobileMenu} className="bg-primary text-white w-full py-3 rounded-full text-center font-bold text-sm shadow-lg">
               {t('planYourTrip')}
             </Link>
           </div>

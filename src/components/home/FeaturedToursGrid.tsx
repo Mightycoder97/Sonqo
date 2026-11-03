@@ -53,11 +53,11 @@ export default function FeaturedToursGrid({ tours }: FeaturedToursGridProps) {
             </div>
 
             {/* Floating Price Pill on Image Bottom-Right */}
-            <div className="absolute bottom-3 right-3 z-10 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-2xl shadow-lg border border-primary/20 text-right">
+            <div className="absolute bottom-3 right-3 z-10 bg-white/95 backdrop-blur-md px-3 py-1 rounded-xl shadow-lg border border-primary/20 text-right">
               <span className="block text-[9px] uppercase tracking-wider font-bold text-text-light leading-none mb-0.5">
                 {t('from') || 'Desde'}
               </span>
-              <span className="font-extrabold text-lg text-secondary leading-none">
+              <span className="font-bold text-sm sm:text-base text-secondary leading-none">
                 {tour.slug === TEST_PEN_TOUR_SLUG ? 'S/' : (tc('currency') || 'USD')} <span className="text-primary">{tour.price_adult}</span>
               </span>
             </div>
@@ -75,14 +75,14 @@ export default function FeaturedToursGrid({ tours }: FeaturedToursGridProps) {
           </div>
 
           {/* Card Body */}
-          <div className="px-3 pt-4 pb-2 flex-1 flex flex-col justify-between">
+          <div className="px-3 pt-3.5 pb-2 flex-1 flex flex-col justify-between">
             <div>
               <Link href={`/tours/${tour.slug}`} className="group-hover:text-primary transition-colors block">
-                <h3 className="text-lg sm:text-xl text-secondary font-extrabold mb-2 line-clamp-1 leading-snug">
+                <h3 className="text-sm sm:text-base text-secondary font-bold mb-1.5 line-clamp-1 leading-snug">
                   {tour.title}
                 </h3>
               </Link>
-              <p className="text-text-light text-xs sm:text-sm line-clamp-2 mb-4 font-normal leading-relaxed">
+              <p className="text-text-light text-xs line-clamp-2 mb-3.5 font-normal leading-relaxed">
                 {stripHtml(tour.description) || 'Explora la magia y la belleza de este destino increíble con nuestro tour guiado.'}
               </p>
             </div>

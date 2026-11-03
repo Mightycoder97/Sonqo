@@ -82,24 +82,24 @@ export default async function ExperienciasPage() {
       }} />
 
       {/* Hero */}
-      <div className="bg-primary text-white py-16 sm:py-24 pt-32 sm:pt-36">
-        <div className="container mx-auto px-4 lg:px-8 text-center max-w-4xl">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif mb-4">{t('title')}</h1>
-          <p className="text-lg text-white/80 font-light max-w-2xl mx-auto">
+      <div className="bg-secondary text-white py-14 sm:py-20 pt-28 sm:pt-32">
+        <div className="container mx-auto px-4 lg:px-8 text-center max-w-3xl">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-serif mb-3">{t('title')}</h1>
+          <p className="text-sm sm:text-base text-white/80 font-light max-w-xl mx-auto">
             {t('subtitle')}
           </p>
         </div>
       </div>
 
       {/* Passenger Gallery & Why Us Section */}
-      <section className="py-16 lg:py-24">
+      <section className="py-12 lg:py-18">
         <div className="container mx-auto px-4 lg:px-8 max-w-6xl">
-          <div className="text-center mb-12">
-            <span className="text-primary text-xs font-bold uppercase tracking-wider block mb-2">{t('whyUsTitle')}</span>
-            <h2 className="text-3xl md:text-4xl font-serif text-text-main max-w-2xl mx-auto mb-4 leading-tight">
-              Compartiendo la felicidad de viajar por el Perú antiguo
+          <div className="text-center mb-10">
+            <span className="text-primary text-xs font-bold uppercase tracking-wider block mb-1.5">{t('whyUsTitle')}</span>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-serif text-secondary max-w-2xl mx-auto mb-3 leading-tight">
+              Compartiendo la felicidad de viajar por el Perú con Sonqo Perú Travel
             </h2>
-            <p className="text-text-light text-base max-w-3xl mx-auto leading-relaxed font-light">
+            <p className="text-text-light text-xs sm:text-sm max-w-2xl mx-auto leading-relaxed font-normal">
               {t('whyUsText')}
             </p>
           </div>

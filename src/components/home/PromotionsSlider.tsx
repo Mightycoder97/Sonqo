@@ -77,12 +77,15 @@ export default function PromotionsSlider() {
       <div className="container mx-auto px-4 lg:px-8">
         
         {/* Header Section */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-7 sm:mb-10 gap-4">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-8 gap-4">
           <div className="max-w-2xl">
-            <h2 className="text-[clamp(1.75rem,4vw+0.5rem,3rem)] font-extrabold text-secondary leading-tight mb-2.5 sm:mb-3">
+            <span className="text-primary text-[11px] font-bold uppercase tracking-widest block mb-1">
+              Ofertas Especiales
+            </span>
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-serif font-bold text-secondary leading-tight mb-2">
               {t('title')}
             </h2>
-            <p className="text-text-light text-sm sm:text-base font-normal">
+            <p className="text-text-light text-xs sm:text-sm font-normal">
               {t('subtitle')}
             </p>
           </div>
@@ -125,15 +128,15 @@ export default function PromotionsSlider() {
 
                   {/* Text details and CTA */}
                   <div>
-                    <h3 className="text-lg sm:text-2xl md:text-3xl font-extrabold text-white tracking-tight leading-tight mb-1.5 sm:mb-2">
+                    <h3 className="text-base sm:text-lg md:text-xl font-bold text-white tracking-tight leading-snug mb-1.5">
                       {t(card.titleKey)}
                     </h3>
-                    <p className="text-xs sm:text-sm text-white/85 font-normal mb-3.5 sm:mb-5 line-clamp-2 max-w-sm">
+                    <p className="text-xs text-white/85 font-normal mb-3 sm:mb-4 line-clamp-2 max-w-sm">
                       {t(card.descKey)}
                     </p>
                     <Link
                       href={card.link}
-                      className="inline-block bg-white hover:bg-primary hover:text-white text-secondary px-5 py-2 sm:px-6 sm:py-2.5 rounded-xl font-extrabold text-xs sm:text-sm transition-all duration-300 shadow-lg active:scale-95 text-center"
+                      className="inline-block bg-white hover:bg-primary hover:text-white text-secondary px-4 py-2 sm:px-5 sm:py-2 rounded-xl font-bold text-xs transition-all duration-300 shadow-lg active:scale-95 text-center"
                     >
                       {t(card.ctaKey)}
                     </Link>

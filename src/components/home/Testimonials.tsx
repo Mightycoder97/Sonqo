@@ -1,11 +1,47 @@
 'use client';
 
 import { useRef } from 'react';
-import { ChevronLeft, ChevronRight, MessageSquare } from 'lucide-react';
+import Image from 'next/image';
+import { ChevronLeft, ChevronRight, Star, CheckCircle2, MapPin } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
-const testimonialRatings = [5, 5, 5, 5, 5];
-const testimonialCount = 5;
+const testimonialMeta = [
+  {
+    rating: 5,
+    photo: '/imagenes/passenger_machupicchu.png',
+    tourRef: 'Machu Picchu Full Day',
+    date: 'Enero 2026',
+    platform: 'TripAdvisor',
+  },
+  {
+    rating: 5,
+    photo: '/imagenes/passenger_rainbow.png',
+    tourRef: 'Montaña de 7 Colores',
+    date: 'Febrero 2026',
+    platform: 'Google Reviews',
+  },
+  {
+    rating: 5,
+    photo: '/tours/cusco/valle-sagrado-vip/01.jpg',
+    tourRef: 'Valle Sagrado VIP & Maras',
+    date: 'Febrero 2026',
+    platform: 'TripAdvisor',
+  },
+  {
+    rating: 5,
+    photo: '/tours/cusco/laguna-humantay/01.jpg',
+    tourRef: 'Laguna Humantay Full Day',
+    date: 'Marzo 2026',
+    platform: 'TripAdvisor',
+  },
+  {
+    rating: 5,
+    photo: '/tours/puno/puno-full-day-uros-taquile/01.jpg',
+    tourRef: 'Islas Uros y Taquile · Puno',
+    date: 'Marzo 2026',
+    platform: 'Google Reviews',
+  },
+];
 
 // Official TripAdvisor Owl Logo in SVG
 function TripAdvisorLogo({ className }: { className?: string }) {
@@ -19,90 +55,134 @@ function TripAdvisorLogo({ className }: { className?: string }) {
 export default function Testimonials() {
   const t = useTranslations('home.testimonials');
   const scrollRef = useRef<HTMLDivElement>(null);
-  
+
   const scroll = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
       const scrollAmount = scrollRef.current.offsetWidth * 0.85;
       scrollRef.current.scrollBy({
         left: direction === 'left' ? -scrollAmount : scrollAmount,
-        behavior: 'smooth'
+        behavior: 'smooth',
       });
     }
   };
 
   return (
-    <section className="bg-secondary py-14 sm:py-20 lg:py-28 relative overflow-hidden">
+    <section className="bg-secondary py-12 sm:py-16 lg:py-20 relative overflow-hidden">
       {/* Vibrant Violet & Petrol Mesh Glow */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute -top-24 -left-20 w-[420px] h-[420px] rounded-full bg-primary/35 blur-[110px]" />
-        <div className="absolute -bottom-24 right-0 w-[500px] h-[500px] rounded-full bg-primary/25 blur-[130px]" />
+        <div className="absolute -top-24 -left-20 w-[380px] h-[380px] rounded-full bg-primary/30 blur-[110px]" />
+        <div className="absolute -bottom-24 right-0 w-[420px] h-[420px] rounded-full bg-primary/20 blur-[130px]" />
       </div>
-      
+
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 sm:mb-12">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-6 sm:mb-8 gap-4">
           <div className="max-w-2xl">
-            <h2 className="text-[clamp(1.75rem,4vw+0.5rem,3rem)] font-serif font-extrabold text-white mb-3 sm:mb-4 tracking-tight leading-tight">
+            <span className="text-primary-light text-[11px] font-bold uppercase tracking-widest block mb-1.5">
+              Referencias y Reseñas Verificadas
+            </span>
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-serif font-bold text-white mb-2 tracking-tight leading-tight">
               {t('title')}
             </h2>
-            <p className="text-white/75 text-sm sm:text-lg">
+            <p className="text-white/75 text-xs sm:text-sm">
               {t('subtitle')}
             </p>
           </div>
-          <div className="hidden sm:flex gap-3 mt-4 md:mt-0">
-            <button
-              onClick={() => scroll('left')}
-              className="w-12 h-12 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-all cursor-pointer"
-              aria-label={t('ariaLabels.previous')}
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </button>
-            <button
-              onClick={() => scroll('right')}
-              className="w-12 h-12 rounded-2xl bg-primary border border-primary flex items-center justify-center text-white hover:bg-white hover:text-secondary transition-all cursor-pointer shadow-lg shadow-primary/30"
-              aria-label={t('ariaLabels.next')}
-            >
-              <ChevronRight className="w-5 h-5" />
-            </button>
+
+          <div className="flex flex-wrap items-center gap-2.5">
+            {/* Summary Platform Badges */}
+            <div className="bg-white/10 backdrop-blur-md border border-white/15 rounded-xl px-3.5 py-2 flex items-center gap-2 text-white">
+              <TripAdvisorLogo className="w-4 h-4 text-[#00aa6c]" />
+              <div className="text-xs leading-tight">
+                <span className="font-bold">5.0 ★ TripAdvisor</span>
+                <span className="block text-[10px] text-white/70">+200 opiniones</span>
+              </div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-md border border-white/15 rounded-xl px-3.5 py-2 flex items-center gap-2 text-white">
+              <Star className="w-4 h-4 text-yellow-400 fill-current" />
+              <div className="text-xs leading-tight">
+                <span className="font-bold">4.9 ★ Google</span>
+                <span className="block text-[10px] text-white/70">+320 reseñas</span>
+              </div>
+            </div>
+
+            <div className="hidden sm:flex gap-2 ml-2">
+              <button
+                onClick={() => scroll('left')}
+                className="w-10 h-10 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-all cursor-pointer"
+                aria-label={t('ariaLabels.previous')}
+              >
+                <ChevronLeft className="w-4 h-4" />
+              </button>
+              <button
+                onClick={() => scroll('right')}
+                className="w-10 h-10 rounded-xl bg-primary border border-primary flex items-center justify-center text-white hover:bg-white hover:text-secondary transition-all cursor-pointer shadow-lg shadow-primary/30"
+                aria-label={t('ariaLabels.next')}
+              >
+                <ChevronRight className="w-4 h-4" />
+              </button>
+            </div>
           </div>
         </div>
 
         {/* Scroll container */}
         <div
           ref={scrollRef}
-          className="flex gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 -mx-4 px-4"
+          className="flex gap-4 sm:gap-5 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 -mx-4 px-4"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
-          {Array.from({ length: testimonialCount }).map((_, index) => (
+          {testimonialMeta.map((meta, index) => (
             <div
               key={index}
-              className="snap-start shrink-0 w-[84vw] max-w-[330px] sm:max-w-none sm:w-[45%] lg:w-[31%] bg-white rounded-[24px] sm:rounded-[28px] p-5 sm:p-7 border border-white/20 shadow-[0_14px_35px_rgba(0,0,0,0.2)] flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300"
+              className="snap-start shrink-0 w-[82vw] max-w-[310px] sm:max-w-none sm:w-[45%] lg:w-[31.5%] bg-white rounded-2xl p-4 sm:p-5 border border-white/20 shadow-[0_12px_30px_rgba(0,0,0,0.18)] flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300"
             >
               <div>
+                {/* Tour Reference Image Header */}
+                <div className="relative h-32 w-full rounded-xl overflow-hidden mb-3.5">
+                  <Image
+                    src={meta.photo}
+                    alt={meta.tourRef}
+                    fill
+                    sizes="(max-width: 640px) 82vw, 320px"
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-secondary/85 via-secondary/20 to-transparent" />
+                  <div className="absolute bottom-2 left-2.5 right-2.5 flex items-center justify-between text-white">
+                    <span className="inline-flex items-center gap-1 text-[10px] font-bold bg-primary/90 px-2 py-0.5 rounded-full">
+                      <MapPin className="w-2.5 h-2.5" />
+                      {meta.tourRef}
+                    </span>
+                    <span className="text-[10px] text-white/80 font-medium">{meta.date}</span>
+                  </div>
+                </div>
+
                 {/* Review header */}
-                <div className="flex justify-between items-center mb-5">
-                  <div className="flex gap-1.5 bg-cream px-3 py-1.5 rounded-full">
-                    {Array.from({ length: testimonialRatings[index] }).map((_, i) => (
-                      <span key={i} className="w-3 h-3 rounded-full bg-primary inline-block" />
+                <div className="flex justify-between items-center mb-2.5">
+                  <div className="flex gap-1 bg-cream px-2.5 py-1 rounded-full">
+                    {Array.from({ length: meta.rating }).map((_, i) => (
+                      <span key={i} className="w-2.5 h-2.5 rounded-full bg-primary inline-block" />
                     ))}
                   </div>
-                  <TripAdvisorLogo className="w-5 h-5 text-secondary/40" />
+                  <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">
+                    <CheckCircle2 className="w-3 h-3" />
+                    {meta.platform}
+                  </span>
                 </div>
-                
-                <h4 className="font-serif text-lg sm:text-xl text-secondary mb-3 font-extrabold leading-snug">
+
+                <h4 className="font-serif text-sm sm:text-base text-secondary mb-2 font-bold leading-snug">
                   &ldquo;{t(`items.${index}.title`)}&rdquo;
                 </h4>
-                <p className="text-text-light text-sm leading-relaxed mb-6">
+                <p className="text-text-light text-xs leading-relaxed mb-4 line-clamp-4">
                   {t(`items.${index}.text`)}
                 </p>
               </div>
-              
-              <div className="border-t border-gray-100 pt-4 flex items-center gap-3.5">
-                <div className="w-11 h-11 rounded-2xl bg-primary text-white flex items-center justify-center font-extrabold text-sm shadow-md shadow-primary/25">
+
+              <div className="border-t border-gray-100 pt-3 flex items-center gap-3">
+                <div className="w-9 h-9 rounded-xl bg-primary text-white flex items-center justify-center font-bold text-xs shadow-sm shadow-primary/25 shrink-0">
                   {t(`items.${index}.name`).charAt(0)}
                 </div>
-                <div>
-                  <p className="font-extrabold text-secondary text-sm">{t(`items.${index}.name`)}</p>
-                  <p className="text-primary text-[11px] font-bold uppercase tracking-wider">{t(`items.${index}.country`)}</p>
+                <div className="min-w-0">
+                  <p className="font-bold text-secondary text-xs truncate">{t(`items.${index}.name`)}</p>
+                  <p className="text-primary text-[10px] font-bold uppercase tracking-wider">{t(`items.${index}.country`)}</p>
                 </div>
               </div>
             </div>
