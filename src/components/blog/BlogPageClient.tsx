@@ -191,7 +191,7 @@ export default function BlogPageClient({ tours }: BlogPageClientProps) {
       {/* 3. Search block styled like Google Search + Modo IA */}
       <section className="bg-accent/30 py-16 border-y border-gray-100">
         <div className="container mx-auto px-4 lg:px-8 max-w-3xl text-center">
-          <span className="text-xs font-bold uppercase tracking-widest text-primary block mb-3">Blog MTA</span>
+          <span className="text-xs font-bold uppercase tracking-widest text-primary block mb-3">Blog {getBrandConfig().shortName}</span>
           <h2 className="text-2xl sm:text-3xl font-serif text-text-main mb-8">
             Toda la informacion que necesitas esta aqui
           </h2>

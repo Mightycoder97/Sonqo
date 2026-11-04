@@ -7,6 +7,7 @@ import BookingSidebar from '@/components/tours/BookingSidebar';
 import BookingWidget from '@/components/home/BookingWidget';
 import JsonLd from '@/components/seo/JsonLd';
 import { createClient } from '@/lib/supabase/server';
+import { getBrandConfig } from '@/lib/brand';
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('meta');
@@ -18,6 +19,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function ContactoPage() {
   const t = await getTranslations('pages.contact');
+  const brand = getBrandConfig();
   
   // Fetch default popular tour for the booking widget on the contact page
   const supabase = await createClient();
@@ -43,10 +45,10 @@ export default async function ContactoPage() {
         '@type': 'ContactPage',
         name: t('title'),
         description: t('subtitle'),
-        url: 'https://machupicchutravel.com/contacto',
+        url: `${brand.domain}/contacto`,
         contactPoint: {
           '@type': 'ContactPoint',
-          telephone: '+51-955-723-329',
+          telephone: brand.contact.phone,
           contactType: 'reservations',
           areaServed: 'PE',
           availableLanguage: ['Spanish', 'English']
@@ -58,7 +60,7 @@ export default async function ContactoPage() {
         <div className="container mx-auto px-4 lg:px-8 text-center max-w-3xl">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-serif mb-3">Contáctanos</h1>
           <p className="text-sm sm:text-base text-white/80 font-light max-w-xl mx-auto">
-            Estamos aquí para ayudarte a planificar tu próxima aventura inolvidable con Sonqo Perú Travel.
+            Estamos aquí para ayudarte a planificar tu próxima aventura inolvidable con {brand.name}.
           </p>
         </div>
       </div>

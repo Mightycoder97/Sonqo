@@ -168,17 +168,20 @@ export function resolveTenantFromBooking(booking: {
 }
 
 export function applyBrandToMessages<T>(messages: T, brand: BrandConfig = getBrandConfig()): T {
-  if (brand.id === 'mta') {
-    return messages;
-  }
-
   const transformValue = (val: unknown): unknown => {
     if (typeof val === 'string') {
+      if (brand.id === 'sonqo') {
+        return val
+          .replace(/Machu\s*Picchu\s*Travel\s*Adventure\s*E\.I\.R\.L\./gi, brand.legalName)
+          .replace(/Machu\s*Picchu\s*Travel\s*Adventures?/gi, brand.name)
+          .replace(/Machu\s*Picchu\s*Travel/gi, brand.shortName)
+          .replace(/reservasmtaperu@gmail\.com/gi, brand.contact.email)
+          .replace(/\+51 955 723 329/g, brand.contact.phone);
+      }
       return val
-        .replace(/Machu\s*Picchu\s*Travel\s*Adventure\s*E\.I\.R\.L\./gi, brand.legalName)
-        .replace(/Machu\s*Picchu\s*Travel\s*Adventures?/gi, brand.name)
-        .replace(/Machu\s*Picchu\s*Travel/gi, brand.shortName)
-        .replace(/reservasmtaperu@gmail\.com/gi, brand.contact.email)
+        .replace(/Sonqo\s*Per[uú]\s*Travel\s*E\.I\.R\.L\./gi, brand.legalName)
+        .replace(/Sonqo\s*Per[uú]\s*Travel/gi, brand.name)
+        .replace(/reservas@sonqoperutravel\.com/gi, brand.contact.email)
         .replace(/\+51 955 723 329/g, brand.contact.phone);
     }
     if (Array.isArray(val)) {
@@ -196,3 +199,4 @@ export function applyBrandToMessages<T>(messages: T, brand: BrandConfig = getBra
 
   return transformValue(messages) as T;
 }
+

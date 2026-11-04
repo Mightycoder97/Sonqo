@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import { MapPin, Phone, Mail, Clock, BookOpen, ShieldAlert, PhoneCall, ShieldCheck, ArrowRight } from 'lucide-react';
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 import { getBrandConfig } from '@/lib/brand';
 import { ProtegemeModalTrigger } from '@/components/ui/ProtegemeModal';
 
@@ -39,6 +39,8 @@ function TripAdvisorIcon({ className }: { className?: string }) {
 
 export default async function Footer() {
   const t = await getTranslations('footer');
+  const locale = await getLocale();
+  const isEn = locale === 'en';
   const brand = getBrandConfig();
   const rucValue = brand.ruc;
 
@@ -64,7 +66,10 @@ export default async function Footer() {
               {brand.legalName} — RUC: {rucValue}
             </p>
             <p className="text-primary-light text-[11px] font-medium mb-3">
-              {brand.gerceturAccreditation || 'Agencia de Viajes y Turismo Registrada en GERCETUR Cusco'} · Reg. {brand.minceturRegistrationCode || 'DIRCETUR-CUSCO-2024-00129'}
+              {isEn
+                ? 'Travel and Tourism Agency Registered with GERCETUR Cusco'
+                : brand.gerceturAccreditation || 'Agencia de Viajes y Turismo Registrada en GERCETUR Cusco'}{' '}
+              · Reg. {brand.minceturRegistrationCode || 'DIRCETUR-CUSCO-2024-00129'}
             </p>
             <p className="text-gray-300 text-xs leading-relaxed mb-5 font-light">
               {t('brand.description')}
@@ -127,7 +132,7 @@ export default async function Footer() {
             <h4 className="font-bold text-xs uppercase tracking-wider text-white mb-4 border-b border-gray-800 pb-2">{t('util.title')}</h4>
             <ul className="space-y-2 font-light text-gray-400 text-xs">
               <li><Link href="/tours" className="hover:text-primary transition-colors">{t('util.paquetes')}</Link></li>
-              <li><Link href="/experiencias" className="hover:text-primary transition-colors">Experiencias de Viajeros</Link></li>
+              <li><Link href="/experiencias" className="hover:text-primary transition-colors">{isEn ? 'Traveler Experiences' : 'Experiencias de Viajeros'}</Link></li>
               <li><Link href="/blog" className="hover:text-primary transition-colors">{t('util.blogMachuPicchu')}</Link></li>
               <li><Link href="/tours" className="hover:text-primary transition-colors">{t('util.destinosRecomendados')}</Link></li>
               <li><Link href="/contacto" className="hover:text-primary transition-colors">{t('util.planificarViaje')}</Link></li>
@@ -184,7 +189,7 @@ export default async function Footer() {
               <li className="text-gray-300 font-semibold">{brand.legalName}</li>
               <li className="text-gray-300 font-semibold">{t('corporativo.rucLabel', { ruc: rucValue })}</li>
               <li className="text-[11px] text-gray-400 font-light mt-1">
-                Acreditación: MINCETUR & GERCETUR Cusco ({brand.minceturRegistrationCode || 'DIRCETUR-CUSCO-2024-00129'})
+                {isEn ? 'Accreditation' : 'Acreditación'}: MINCETUR & GERCETUR Cusco ({brand.minceturRegistrationCode || 'DIRCETUR-CUSCO-2024-00129'})
               </li>
             </ul>
 
@@ -210,7 +215,7 @@ export default async function Footer() {
                 <div className="bg-white p-3 rounded-2xl shadow-md border border-white/20 flex flex-col items-center justify-center text-center w-[125px] sm:w-[135px] h-[175px]">
                   <Image
                     src="/imagenes/logos/1.png"
-                    alt="Agencia de Viajes y Turismo Registrada - MINCETUR"
+                    alt={isEn ? 'Registered Travel and Tourism Agency - MINCETUR' : 'Agencia de Viajes y Turismo Registrada - MINCETUR'}
                     width={110}
                     height={150}
                     className="object-contain max-h-[125px] w-auto"
@@ -219,7 +224,7 @@ export default async function Footer() {
                     MINCETUR
                   </span>
                   <span className="text-[9px] text-gray-500 font-medium">
-                    Agencia Registrada
+                    {isEn ? 'Registered Agency' : 'Agencia Registrada'}
                   </span>
                 </div>
 
@@ -228,7 +233,7 @@ export default async function Footer() {
                   <div className="bg-white p-3 rounded-2xl shadow-md border border-white/20 hover:border-primary hover:shadow-lg transition-all flex flex-col items-center justify-center text-center w-[165px] sm:w-[185px] h-[175px] cursor-pointer group">
                     <Image
                       src="/imagenes/logos/2.png"
-                      alt="Protégeme - Turismo Responsable contra la ESNNA"
+                      alt={isEn ? 'Protégeme - Responsible Tourism against ESNNA' : 'Protégeme - Turismo Responsable contra la ESNNA'}
                       width={160}
                       height={115}
                       className="object-contain max-h-[115px] w-auto group-hover:scale-105 transition-transform"
@@ -237,7 +242,7 @@ export default async function Footer() {
                       Protégeme ESNNA
                     </span>
                     <span className="text-[9px] text-gray-500 font-medium group-hover:text-primary-dark transition-colors">
-                      Clic para ver afiche
+                      {isEn ? 'Click to view poster' : 'Clic para ver afiche'}
                     </span>
                   </div>
                 </ProtegemeModalTrigger>
@@ -248,7 +253,11 @@ export default async function Footer() {
                 <div className="space-y-2">
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 text-primary-light text-xs font-bold uppercase tracking-wider">
                     <ShieldAlert className="w-4 h-4 text-primary-light shrink-0" />
-                    <span>Compromiso Legal contra la ESNNA (Ley N° 29408 & R.M. 108-2020-MINCETUR)</span>
+                    <span>
+                      {isEn
+                        ? 'Legal Commitment Against ESNNA (Law N° 29408 & R.M. 108-2020-MINCETUR)'
+                        : 'Compromiso Legal contra la ESNNA (Ley N° 29408 & R.M. 108-2020-MINCETUR)'}
+                    </span>
                   </div>
 
                   {/* Verbatim Spanish Statement */}
@@ -266,15 +275,15 @@ export default async function Footer() {
                 <div className="text-[11px] text-gray-300 font-light flex flex-wrap items-center justify-center lg:justify-start gap-x-2.5 gap-y-1">
                   <span className="text-white font-medium flex items-center gap-1">
                     <ShieldCheck className="w-3.5 h-3.5 text-primary-light" />
-                    Bases Estatutarias:
+                    {isEn ? 'Statutory Basis:' : 'Bases Estatutarias:'}
                   </span>
-                  <span>Ley N° 29408 (Arts. 43 y 44)</span>
+                  <span>{isEn ? 'Law N° 29408 (Arts. 43 & 44)' : 'Ley N° 29408 (Arts. 43 y 44)'}</span>
                   <span>•</span>
                   <span>D.S. N° 003-2010-MINCETUR</span>
                   <span>•</span>
-                  <span>Ley N° 30963</span>
+                  <span>{isEn ? 'Law N° 30963' : 'Ley N° 30963'}</span>
                   <span>•</span>
-                  <span>Ley N° 30802</span>
+                  <span>{isEn ? 'Law N° 30802' : 'Ley N° 30802'}</span>
                   <span>•</span>
                   <span>R.M. N° 108-2020-MINCETUR</span>
                   <span>•</span>
@@ -285,33 +294,33 @@ export default async function Footer() {
                 <div className="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-2 text-xs">
                   <span className="font-semibold text-gray-200 flex items-center gap-1 shrink-0">
                     <PhoneCall className="w-3.5 h-3.5 text-primary-light" />
-                    Líneas Gratuitas 24 Horas:
+                    {isEn ? '24-Hour Free Hotlines:' : 'Líneas Gratuitas 24 Horas:'}
                   </span>
                   <a
                     href="tel:100"
                     className="px-2.5 py-1 rounded-lg bg-white/10 hover:bg-primary hover:text-white transition-colors font-bold text-white border border-white/10"
-                    title="Línea 100 - MIMP (Atención y protección 24h)"
+                    title={isEn ? 'Línea 100 - MIMP (24h assistance & protection)' : 'Línea 100 - MIMP (Atención y protección 24h)'}
                   >
                     Línea 100 (MIMP)
                   </a>
                   <a
                     href="tel:1818"
                     className="px-2.5 py-1 rounded-lg bg-white/10 hover:bg-primary hover:text-white transition-colors font-bold text-white border border-white/10"
-                    title="Línea 1818 - MININTER (Denuncia trata de personas y ESNNA)"
+                    title={isEn ? 'Línea 1818 - MININTER (Report human trafficking & ESNNA)' : 'Línea 1818 - MININTER (Denuncia trata de personas y ESNNA)'}
                   >
                     Línea 1818 (MININTER)
                   </a>
                   <a
                     href="tel:105"
                     className="px-2.5 py-1 rounded-lg bg-white/10 hover:bg-primary hover:text-white transition-colors font-bold text-white border border-white/10"
-                    title="Central 105 - PNP (Emergencias y auxilio policial)"
+                    title={isEn ? 'Central 105 - PNP (Police emergency dispatch)' : 'Central 105 - PNP (Emergencias y auxilio policial)'}
                   >
                     Central 105 (PNP)
                   </a>
                   <a
                     href="tel:+5184249769"
                     className="px-2.5 py-1 rounded-lg bg-white/10 hover:bg-primary hover:text-white transition-colors font-bold text-white border border-white/10"
-                    title="POLTUR Cusco - Policía de Turismo Cusco"
+                    title={isEn ? 'POLTUR Cusco - Cusco Tourism Police' : 'POLTUR Cusco - Policía de Turismo Cusco'}
                   >
                     POLTUR Cusco: (084) 249769
                   </a>
@@ -319,7 +328,7 @@ export default async function Footer() {
                     href="/protegeme"
                     className="inline-flex items-center gap-1 px-3 py-1 rounded-lg bg-primary text-white hover:bg-primary-dark transition-colors font-bold text-xs shadow-xs sm:ml-auto"
                   >
-                    <span>Ver Código ESNNA</span>
+                    <span>{isEn ? 'View ESNNA Code' : 'Ver Código ESNNA'}</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>
