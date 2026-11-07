@@ -112,7 +112,7 @@ export default async function ContactoPage() {
           {/* Iframe Google Map */}
           <div className="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-200 h-[380px] sm:h-[450px] relative w-full">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3879.791557342938!2d-71.97905152396155!3d-13.51772658685165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916e7f22ecb822bb%3A0x8673a5a40a5a31a!2sAv.%20El%20Sol%2C%20Cusco%2008002!5e0!3m2!1ses-419!2spe!4v1717900000000!5m2!1ses-419!2spe"
+              src="https://www.google.com/maps?q=Cal.+Fernando+Tupac+Amaru+Urb.+Tupac+Amaru,+Cusco,+Peru&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -128,17 +128,17 @@ export default async function ContactoPage() {
             <div className="bg-white p-5 rounded-2xl border border-gray-150 shadow-sm flex flex-col items-center">
               <MapPin className="w-6 h-6 text-primary mb-2 animate-bounce" />
               <h4 className="font-bold text-xs uppercase tracking-wider text-text-light mb-1">Dirección</h4>
-              <p className="text-text-main text-xs sm:text-sm font-semibold">Av. El Sol 123, Cusco, Perú</p>
+              <p className="text-text-main text-xs sm:text-sm font-semibold">{brand.contact.address}</p>
             </div>
             <div className="bg-white p-5 rounded-2xl border border-gray-150 shadow-sm flex flex-col items-center">
               <MessageCircle className="w-6 h-6 text-primary mb-2" />
               <h4 className="font-bold text-xs uppercase tracking-wider text-text-light mb-1">WhatsApp Principal</h4>
-              <p className="text-text-main text-xs sm:text-sm font-semibold">+51 955 723 329</p>
+              <p className="text-text-main text-xs sm:text-sm font-semibold">{brand.contact.phone}</p>
             </div>
             <div className="bg-white p-5 rounded-2xl border border-gray-150 shadow-sm flex flex-col items-center">
               <Mail className="w-6 h-6 text-primary mb-2" />
               <h4 className="font-bold text-xs uppercase tracking-wider text-text-light mb-1">Consultas</h4>
-              <p className="text-text-main text-xs sm:text-sm font-semibold break-all">reservas@sonqoperutravel.com</p>
+              <p className="text-text-main text-xs sm:text-sm font-semibold break-all">{brand.contact.email}</p>
             </div>
           </div>
         </div>

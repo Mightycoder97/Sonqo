@@ -3,12 +3,12 @@
 
 **Document Version**: 1.0.0-PROD  
 **Authoritative Status**: Official Architectural & Statutory Master Plan  
-**Target Enterprise**: Machu Picchu Travel Adventure E.I.R.L. (Secondary Tenant: Sonqo Perú Travel E.I.R.L.)  
-**R.U.C.**: `20564458385`  
-**Commercial Registry & Fiscal Domicile**: Av. El Sol 123, Centro Histórico, Cusco, Perú  
+**Target Enterprise**: Sonqo Perú Travel E.I.R.L. (`SONQO PERU TRAVEL EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA` — Partida Electrónica N° `11380723` / Titular-Gerente: Elvis Rodríguez Vera)  
+**R.U.C.**: `20616667549`  
+**Commercial Registry & Fiscal Domicile**: Cal. Fernando Túpac Amaru Mz. LL Lote 3, Urb. Túpac Amaru, Cusco, Perú  
 **Target Jurisdiction**: República del Perú — MINCETUR, GERCETUR Cusco, INDECOPI, MTC/SUTRAN, MIMP/MININTER, ANPDP-MINJUSDH  
 **Platform Architecture**: Next.js 16.2.1 App Router (`src/app/[locale]/(public)`), React 19.2.4, TypeScript Strict, `next-intl` (Bilingual: `es`, `en`)  
-**Scope**: Inbound & Adventure Tourism Digital Channel (`machupicchutravel.com` / `sonqoperutravel.com`)
+**Scope**: Inbound & Adventure Tourism Digital Channel (`sonqoperutravel.com` / `machupicchutravel.com`)
 
 ---
 
@@ -51,11 +51,11 @@ The following multi-institutional matrix defines the statutory oversight bodies 
 
 #### Article 22 Mandates (Canales Digitales de Comercialización):
 Any travel and tourism agency that commercializes services through websites, electronic platforms, or mobile applications must visibly, clearly, and permanently display on its main access interfaces:
-1. **Razón Social** (Corporate Legal Name): `Machu Picchu Travel Adventure E.I.R.L.`
-2. **R.U.C.** (Registro Único de Contribuyentes): `20564458385`
-3. **Physical / Fiscal Domicile**: `Av. El Sol 123, Centro Histórico, Cusco, Perú`
-4. **Direct Contact Telephone**: `+51 955 723 329`
-5. **Customer Service & Bookings Email**: `reservasmtaperu@gmail.com` (Tenant Sonqo: `reservas@sonqoperutravel.com`)
+1. **Razón Social** (Corporate Legal Name): `Sonqo Perú Travel E.I.R.L.` (`SONQO PERU TRAVEL EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA`)
+2. **R.U.C.** (Registro Único de Contribuyentes): `20616667549`
+3. **Physical / Fiscal Domicile**: `Cal. Fernando Túpac Amaru Mz. LL Lote 3, Urb. Túpac Amaru, Cusco, Perú`
+4. **Direct Contact Telephone**: `+51 984 228 417`
+5. **Customer Service & Bookings Email**: `sonqoperutravel@gmail.com`
 6. **Operating Hours**: Customer support schedule (e.g., *Lunes a Domingo: 06:00 - 22:00 UTC-5*).
 7. **Directorio Nacional Reference**: Active notice confirming registration in the *Directorio Nacional de Prestadores de Servicios Turísticos Calificados de MINCETUR*.
 
@@ -303,7 +303,7 @@ npm run build
    - **Badge 2 (`2.png`)**: Confirm the "Protégeme" emblem is rendered inside a white frame and is clickable, opening the interactive compliance dialog or directing to `/protegeme`.
    - **Verbatim Text**: Confirm the verbatim anti-ESNNA statement is displayed legibly with high contrast.
    - **Hotlines**: Test clicking on `Línea 100`, `Línea 1818`, and `Central 105`. Confirm they initiate dialer protocols (`tel:100`, `tel:1818`, `tel:105`).
-   - **Commercial Data**: Confirm `Machu Picchu Travel Adventure E.I.R.L.`, RUC `20564458385`, and `Av. El Sol 123, Centro Histórico, Cusco, Perú` are prominently displayed.
+   - **Commercial Data**: Confirm `Sonqo Perú Travel E.I.R.L.`, RUC `20616667549`, and `Cal. Fernando Túpac Amaru Mz. LL Lote 3, Urb. Túpac Amaru, Cusco, Perú` are prominently displayed.
 
 #### B. Dedicated Route Accessibility Inspection:
 1. Navigate to `/protegeme` and `/en/protegeme`. Confirm HTTP 200 status, correct rendering of emblems, full statutory text, reporting directory, and guide code of conduct.
@@ -325,7 +325,7 @@ npm run build
 
 #### D. Multi-Tenant Brand Switching Inspection:
 1. Set environment variable `NEXT_PUBLIC_BRAND_TENANT=sonqo` or pass override.
-2. Confirm the commercial legal name switches to `Sonqo Perú Travel E.I.R.L.` while retaining RUC `20564458385`, Cusco fiscal address, and all statutory MINCETUR / ESNNA / INDECOPI badges and disclosures intact.
+2. Confirm the commercial legal name switches to `Sonqo Perú Travel E.I.R.L.` with RUC `20616667549`, fiscal domicile `Cal. Fernando Túpac Amaru Mz. LL Lote 3, Urb. Túpac Amaru, Cusco, Perú`, telephone `+51 984 228 417`, email `sonqoperutravel@gmail.com`, and all statutory MINCETUR / ESNNA / INDECOPI badges and disclosures intact.
 
 ---
 

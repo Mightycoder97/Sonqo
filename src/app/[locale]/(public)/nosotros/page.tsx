@@ -277,7 +277,7 @@ export default async function NosotrosPage() {
                 Una agencia peruana hecha con el corazón (&ldquo;Sonqo&rdquo;)
               </h2>
               <p className="text-text-light text-xs sm:text-sm leading-relaxed mb-3.5">
-                En quechua, <strong>&ldquo;Sonqo&rdquo;</strong> significa corazón. Somos <strong>{brand.name}</strong> ({brand.legalName}), una agencia de viajes y operadora de turismo receptivo con sede en el Centro Histórico del Cusco, dedicada a diseñar experiencias memorables en todo el Perú.
+                En quechua, <strong>&ldquo;Sonqo&rdquo;</strong> significa corazón. Somos <strong>{brand.name}</strong> ({brand.legalName}), una agencia de viajes y operadora de turismo receptivo con sede en la ciudad del Cusco, dedicada a diseñar experiencias memorables en todo el Perú.
               </p>
               <p className="text-text-light text-xs sm:text-sm leading-relaxed mb-5">
                 Nuestro equipo de asesores, coordinadores logísticos y guías oficiales trabaja cuidando cada detalle: desde la emisión garantizada de boletos al Santuario de Machu Picchu y trenes turísticos hasta el acompañamiento permanente vía WhatsApp durante todo tu viaje.
@@ -383,10 +383,11 @@ export default async function NosotrosPage() {
                 <div className="text-xs sm:text-sm text-text-light space-y-1.5 mb-3">
                   <p><span className="font-semibold text-secondary">Número de RUC:</span> {brand.ruc}</p>
                   <p><span className="font-semibold text-secondary">Razón Social:</span> {brand.legalName}</p>
+                  <p><span className="font-semibold text-secondary">Partida Registral:</span> N° 11380723</p>
                 </div>
               </div>
               <p className="text-[11px] text-gray-400 border-t border-gray-100 pt-3 leading-relaxed">
-                Contribuyente activo y habido ante la Superintendencia Nacional de Aduanas y de Administración Tributaria.
+                Contribuyente ACTIVO y HABIDO ante SUNAT (CIIU 7911 - Actividades de Agencias de Viajes).
               </p>
             </div>
 
@@ -399,7 +400,7 @@ export default async function NosotrosPage() {
                 <h3 className="font-serif text-base text-secondary font-bold mb-3">Licencia GERCETUR / DIRCETUR</h3>
                 <div className="text-xs sm:text-sm text-text-light space-y-1.5 mb-3">
                   <p><span className="font-semibold text-secondary">Operador Turístico:</span> Reg. N° 1245-2026/GR-CUSCO</p>
-                  <p><span className="font-semibold text-secondary">Sede:</span> Centro Histórico del Cusco</p>
+                  <p><span className="font-semibold text-secondary">Domicilio Fiscal:</span> Urb. Túpac Amaru, Cusco</p>
                 </div>
               </div>
               <p className="text-[11px] text-gray-400 border-t border-gray-100 pt-3 leading-relaxed">

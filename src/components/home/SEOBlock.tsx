@@ -94,7 +94,7 @@ export default async function SEOBlock() {
                   <ShieldCheck className="w-4 h-4 text-primary shrink-0" />
                   <div>
                     <p className="text-xs font-bold text-secondary leading-none">RUC Activo</p>
-                    <p className="text-[10px] text-text-light mt-0.5">20564458385</p>
+                    <p className="text-[10px] text-text-light mt-0.5">20616667549</p>
                   </div>
                 </div>
                 <div className="bg-white/90 rounded-xl p-2.5 border border-primary/10 flex items-center gap-2">

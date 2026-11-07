@@ -67,7 +67,7 @@ export default function ContactForm() {
               required
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
-              placeholder="Ej: +51 955723329"
+              placeholder="Ej: +51 984228417"
               autoComplete="tel"
               className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-primary text-base font-semibold text-text-main"
             />

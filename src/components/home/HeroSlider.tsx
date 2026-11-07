@@ -72,7 +72,7 @@ export default function HeroSlider() {
                 <div className="max-w-xl text-left z-10">
                   <div className="inline-flex items-center gap-2 bg-white/12 backdrop-blur-md border border-white/20 px-3 py-1 rounded-full text-[11px] font-semibold text-white/95 mb-3.5">
                     <ShieldCheck className="w-3.5 h-3.5 text-primary-light" />
-                    <span>Operador Oficial Autorizado en Cusco · RUC 20564458385</span>
+                    <span>Operador Oficial Autorizado en Cusco · RUC 20616667549</span>
                   </div>
 
                   <h2 className="text-[clamp(1.4rem,2.9vw+0.4rem,2.65rem)] font-bold text-white mb-3 sm:mb-4 tracking-tight leading-[1.15]">
